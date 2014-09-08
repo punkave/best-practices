@@ -1,12 +1,15 @@
-# CSS Reading
+# Frontend Development at P'unk Avenue
 ============================================
-These are articles that have helped the frontend team at P'unk Ave
-make decisions about how we make decisions about structuring our stylesheets.
 
-## Overall CSS Philosophy
+## What is this repo?
+This repo is a place to:
+1. describe our currently perceived best practices in frontend development,
+2. ask questions about said best practice,
+3. and archive, summarize, and cite articles that have been particularly helpful in determining those best practices.
 
-## Naming CSS Classes
+## How can I contribute to this repo?
+Any developer at P'unk Avenue has write access to this repo, but we welcome any community contributions through pull requests.
 
-## CSS/LESS File Structure
-
-## CSS Performance
+## Who is P'unk Avenue?
+P'unk Avenue is a design and build firm with a special focus on positive social impact, urbanism, health & wellness, arts & culture, and education.
+We proudly work on and maintain Apostrophe, a content management system that helps individuals and organizations stay on mission.
