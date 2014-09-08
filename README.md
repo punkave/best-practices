@@ -1,5 +1,4 @@
 # Frontend Development at P'unk Avenue
-============================================
 
 ## What is this repo?
 This repo is a place to:
