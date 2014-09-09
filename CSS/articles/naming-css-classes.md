@@ -187,4 +187,4 @@ Therefore, it's our preference to go with a second, extensive class that covers 
 * ["About HTML semantics and front-end architecture" -Nicolas Gallagher](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
 * ["Naming CSS Stuff is Really Hard" -Ethan Muller](http://seesparkbox.com/foundry/naming_css_stuff_is_really_hard)
 
-[Back to All CSS Articles](#)
+[Back to All CSS Articles](CSS/overview.md)
