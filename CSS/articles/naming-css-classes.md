@@ -49,7 +49,7 @@ Using our list-like item from the previous example, we ought to create a class n
 ```
 ## Visually Semantic
 By visually semantic, we mean that class names ought to point to an easily recognizable visual element from the original design or final presentation.
-There's a tendency to have class names reflect CSS rules in an object-oriented kind of way (".display-inline-block" or ".background-blue"),
+There's a tendency to have class names reflect CSS rules in an object-oriented kind of way (`.display-inline-block` or `.background-blue`),
 but we think this tends away from modularity and so using something more visually semantic can help us abstract more easily and not always tie classes to a single rule or function.
 For instance, let's take an example where an element (here a button) is designed to overlap another element:  
 ```css
@@ -103,8 +103,8 @@ In our example below, we take a common case of a button which needs to have a di
 
 ```
 There are some specific LESS anti-patterns to avoid here as well.
-One approach to this extensive pattern is to store the values for our `.button` class in a LESS mixin.
-The perceived advantage here is the use of one class in the markup (`<a href="#" class="button-orange">` vs `<a href="#" class="button button--orange">`).
+One antipattern approach to this extensive pattern is to store the values for our `.button` class in a LESS mixin.
+The perceived advantage of using this anti-pattern is the use of one class in the markup (`<a href="#" class="button-orange">` vs `<a href="#" class="button button--orange">`).
 ```css
 /* Antipattern -- Storing normalized component in mixin */
 .button
