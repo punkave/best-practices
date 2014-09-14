@@ -9,6 +9,7 @@ This has a few practical applications:
 For example, a set of styles that controls a list-like display for elements might have broader application than either a `ul` or `ol` tag.
 ```css
 /* Antipattern */
+/*-------------------------------------------*/
 ul.list-items
 {
   display: block;
@@ -16,6 +17,7 @@ ul.list-items
 }
 
 /* Pattern */
+/*-------------------------------------------*/
 .list-items
 {
   display: block;
@@ -27,6 +29,7 @@ ul.list-items
 Using our list-like item from the previous example, we ought to create a class name that is neither too broad (i.e. I can't tell what it applies to) nor too specific (I'm afraid to apply or modify it).
 ```css
 /* Antipattern -- Too Specific */
+/*-------------------------------------------*/
 .blog-sidebar-list-items
 {
   display: block;
@@ -34,6 +37,7 @@ Using our list-like item from the previous example, we ought to create a class n
 }
 
 /* Antipattern -- Too Broad */
+/*-------------------------------------------*/
 .items
 {
   display: block;
@@ -41,6 +45,7 @@ Using our list-like item from the previous example, we ought to create a class n
 }
 
 /* Pattern */
+/*-------------------------------------------*/
 .list-items
 {
   display: block;
@@ -54,6 +59,7 @@ but we think this tends away from modularity and so using something more visuall
 For instance, let's take an example where an element (here a button) is designed to overlap another element:  
 ```css
 /* Antipattern -- Too Rule Based */
+/*-------------------------------------------*/
 .negative-margin-top
 {
   /* Unlikely to include other styles */
@@ -61,6 +67,7 @@ For instance, let's take an example where an element (here a button) is designed
 }
 
 /* Antipattern -- Too Abstracted */
+/*-------------------------------------------*/
 .up
 {
   /* Could include other styles, but may not be recognizable */
@@ -68,6 +75,7 @@ For instance, let's take an example where an element (here a button) is designed
 }
 
 /* Pattern */
+/*-------------------------------------------*/
 .overlap
 {
   /* Could include other styles about our component */
@@ -82,6 +90,7 @@ In these cases, we prefer a double-dashed extending name.
 In our example below, we take a common case of a button which needs to have a different background color:
 ```css
 /* Antipattern -- Not distinguished */
+/*-------------------------------------------*/
 .button
 {
   /* All the buttons styles */
@@ -92,6 +101,7 @@ In our example below, we take a common case of a button which needs to have a di
 }
 
 /* Pattern */
+/*-------------------------------------------*/
 .button
 {
   /* All the buttons styles */
@@ -107,6 +117,7 @@ One antipattern approach to this extensive pattern is to store the values for ou
 The perceived advantage of using this anti-pattern is the use of one class in the markup (`<a href="#" class="button-orange">` vs `<a href="#" class="button button--orange">`).
 ```css
 /* Antipattern -- Storing normalized component in mixin */
+/*-------------------------------------------*/
 .button
 {
   display: inline-block;
@@ -125,6 +136,7 @@ The perceived advantage of using this anti-pattern is the use of one class in th
   background-color: blue;
 }
 /* Pattern */
+/*-------------------------------------------*/
 .button
 {
   display: inline-block;
@@ -146,6 +158,7 @@ The perceived advantage of using this anti-pattern is the use of one class in th
 The problem here lies in the finally rendered style sheet. Here are the compiled results:
 ```css
 /* Antipattern Results */
+/*-------------------------------------------*/
 .button-orange
 {
   display: inline-block;
@@ -164,6 +177,7 @@ The problem here lies in the finally rendered style sheet. Here are the compiled
 }
 
 /* Pattern Results */
+/*-------------------------------------------*/
 .button
 {
   display: inline-block;
