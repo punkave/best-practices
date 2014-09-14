@@ -10,11 +10,11 @@ While LESS allows these conveniences, it also affords some anti-patters that we'
 
 ## Table of Contents
 * **Vanilla CSS**
-* [Order of CSS Rules (Coming Soon)](#)
-* [Naming CSS Classes](articles/naming-css-classes.md)
+  * [Order of CSS Rules (Coming Soon)](#)
+  * [Naming CSS Classes](articles/naming-css-classes.md)
 * **LESS**
-* [Structuring LESS files (Coming Soon)](#)
-* [Nesting your LESS blocks (Coming Soon)](#)
+  * [Structuring LESS files (Coming Soon)](#)
+  * [Nesting your LESS blocks (Coming Soon)](#)
 * **Responsive Styles**
-* [Creating and Naming CSS Breakpoints](articles/creating-and-naming-css-breakpoints.md)
-* [Implementing CSS Media Queries](articles/implementing-css-media-queries.md)
+  * [Creating and Naming CSS Breakpoints](articles/creating-and-naming-css-breakpoints.md)
+  * [Implementing CSS Media Queries](articles/implementing-css-media-queries.md)
