@@ -10,7 +10,7 @@ While LESS allows these conveniences, it also affords some anti-patters that we'
 
 ## Table of Contents
 * **Vanilla CSS**
-  * [Order of CSS Rules (Coming Soon)](#)
+  * [Order of CSS Rules](articles/ordering-css-rules.md)
   * [Naming CSS Classes](articles/naming-css-classes.md)
 * **LESS**
   * [Structuring LESS files (Coming Soon)](#)
