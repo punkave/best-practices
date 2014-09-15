@@ -5,7 +5,7 @@ In the past, we have spent quite a bit of time laboring over the CSS in our proj
 ## LESS
 At P'unk Ave, we use [LESS]('http://lesscss.org/') to preprocess our stylesheets.
 This allows us to easily store values in variables and keep re-usable or computable code in mixins.
-While LESS allows these conveniences, it also affords some anti-patters that we'll take the time to address throughout these articles.
+While LESS allows these conveniences, it also affords some anti-patterns that we'll take the time to address throughout these articles.
 
 
 ## Table of Contents
