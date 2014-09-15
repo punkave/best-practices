@@ -10,7 +10,7 @@ Once you've established what you're breakpoints will be they should be intuitive
 #### 1. Establishing Units
 In your stylesheet should be the preserved breakpoint values as you've determined them and should follow the naming convention you've established.
 
-```css
+```less
 
 /* Base Variables */
 /* -----------------------------------------------*/
@@ -26,7 +26,7 @@ In your stylesheet should be the preserved breakpoint values as you've determine
 #### 2. Establishing media queries
 Now that the breakpoint values are preserved for future use, wrap them in the desired media query for simple usage. Below are escaped LESS strings.
 
-```css
+```less
 
 /* Media Query Wrappers */
 /* -----------------------------------------------*/
@@ -42,7 +42,7 @@ Now that the breakpoint values are preserved for future use, wrap them in the de
 #### 2.5. Establishing modifier media queries
 It might be desired to create modified media queries that only occur in certain breakpoints and not others. These should follow the normal modifier pattern
 
-```css
+```less
 
 @full--up: ~'(min-width:@{narrowUnit} )';
 @narrow--up: ~'(min-width:@{compactUnit} )';
@@ -52,7 +52,7 @@ It might be desired to create modified media queries that only occur in certain 
 #### 3. Using media queries in context
 Media queries should be treated as first class citizens in your stylesheets. This means using them in the context of the CSS you are modifying as a result of a viewport change. It also means establishing an easily overridable cascade of selectors. Modifications should be made from largest to smallest
 
-```css
+```less
 
 .person-info
 {
@@ -71,7 +71,7 @@ Media queries should be treated as first class citizens in your stylesheets. Thi
 #### 4. Edge case media queries
 Edge cases happen, handle them uniformly and frame the change in the context of established values. Place them in the correct order of your other media queries.
 
-```css
+```less
 
 .person-info
 {

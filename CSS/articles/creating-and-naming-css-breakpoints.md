@@ -9,11 +9,11 @@ Determining breakpoints for a responsive implementation is a case-by-case proces
 Breakpoints should be determined by experimenting with the site in various size viewports and making notes about where specific elements begin to break down. It is ideal to have both developer and designer sensibilities present when determining problem areas.
 
 #### 2. Find common problem points
-Consolidating issues into common points will determine how many breakpoints are needed in adapting the website. This will depend largely on your specific design. The end result this step is a set of sizes (EM/PX/REM) where large, general changes must be made to accommodate the design.
+Consolidating issues into common points will determine how many breakpoints are needed in adapting the website. This will depend largely on your specific design. The end result this step is a set of sizes `EM/PX/REM` where large, general changes must be made to accommodate the design.
 
 ## Naming Breakpoints
 It is helpful to think of the ["modifier pattern"](naming-css-classes.md) in naming CSS classes when thinking about names for your breakpoints. Names should be visually relevant and somewhat general. You are _describing_ the state of the website at a given size.
-
+`
 _Anti-pattern_
 	- desktop
 	- tablet
@@ -24,7 +24,7 @@ _Pattern_
 	- full
 	- narrow
 	- compact
-
+`
 ## Next
 * ["Implementing CSS Media Queries"](implementing-css-media-queries.md)
 
