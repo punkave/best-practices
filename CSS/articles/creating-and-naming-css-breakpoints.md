@@ -13,7 +13,7 @@ Consolidating issues into common points will determine how many breakpoints are 
 
 ## Naming Breakpoints
 It is helpful to think of the ["modifier pattern"](naming-css-classes.md) in naming CSS classes when thinking about names for your breakpoints. Names should be visually relevant and somewhat general. You are _describing_ the state of the website at a given size.
-`
+```
 _Anti-pattern_
 	- desktop
 	- tablet
@@ -24,7 +24,7 @@ _Pattern_
 	- full
 	- narrow
 	- compact
-`
+```
 ## Next
 * ["Implementing CSS Media Queries"](implementing-css-media-queries.md)
 
