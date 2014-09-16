@@ -64,7 +64,7 @@ The output starts with a definition of the `require` function, takes both files 
 
 ## No Global Variables
 
-Notice that the output above does not expose any global variables. Defining a variable becomes limited to the scope of the file, just like in node. Using `module.exports` is the only way to escape this scope, forcing you to pay more attention to the modularity of your components.
+Notice that the output above does not expose any global variables. A variable becomes limited to the scope of the file, just like in node. Using `module.exports` is the only way to escape this scope, forcing you to pay more attention to the modularity of your components.
 
 There are only two situations where global variables are necessary:
   - They are well-formed abstract libraries (jQuery, moment, lodash, etc)
