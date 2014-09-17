@@ -67,9 +67,63 @@ The output starts with a definition of the `require` function, takes both files 
 Notice that the output above does not expose any global variables. A variable becomes limited to the scope of the file, just like in node. Using `module.exports` is the only way to escape this scope, forcing you to pay more attention to the modularity of your components.
 
 There are only two situations where global variables are necessary:
-  - They are well-formed abstract libraries (jQuery, moment, lodash, etc)
-  - They need to be accessed outside of a closure after pageload by inline scripts or other unrelated components
+  - They are well-formed abstract libraries (`jQuery`, `moment`, `lodash`, etc)
+  - They need to be accessed outside of a closure _after pageload_ by inline scripts or other unrelated components
 
-## Build Components
+Within this structure you'll have to be explicit about what you attach to the window:
 
-This structure encourages you to build isolated components. Files should be small (< 200 lines) and very focused.
+```javascript
+window.megaphone = new Megaphone('I belong to the window.');
+```
+
+## Build Components & Export Patterns
+
+This structure encourages you to build isolated components. Files should be small (< 200 lines) and very focused. When creating class-like components (like the fictional `Megaphone` above) the `module.exports` functionality allows you to export the function. For files that don't have obvious functions or objects to export– when binding jQuery events, for example– there are two options.
+
+#### Exporting Files with jQuery Bindings
+
+We could run through the jQuery bindings when the file runs:
+
+```javascript
+// bindEvents.js
+
+$('.megaphone-button').click( function(e) {
+  $('.megaphone-yell').show();
+});
+```
+
+main site file:
+
+```javascript
+// site.js
+
+require('./bindEvents.js');  // this causes the code to run
+```
+
+#### Or
+
+We could wrap our bindings in a function, allowing them to be called only when they are needed:
+
+```javascript
+// bindEvents.js
+
+function bind() {
+  $('.megaphone-button').click( function(e) {
+    $('.megaphone-yell').show();
+  });
+}
+
+module.exports = bind;
+```
+
+Then our main site file can take on the role of controller:
+
+```javascript
+// site.js
+
+$('.megaphone').exists( function() {
+  require('./bindEvents.js')();
+});
+```
+
+The advantage here is that each file does not need to know when to run, allowing us to keep all of our controller logic in one place. We can also pass arguments through the function if we need to give our bindings a little more context.
