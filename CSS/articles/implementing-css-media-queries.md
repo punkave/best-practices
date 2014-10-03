@@ -44,7 +44,7 @@ It might be desired to create modified media queries that only occur in certain 
 
 ```less
 
-@narrow--only: '(min-width:@{narrowUnit}) and (max-width:@{fullUnit})';
+@narrow--only: ~'(min-width:@{narrowUnit}) and (max-width:@{fullUnit})';
 
 ```
 
