@@ -32,7 +32,7 @@ Now that the breakpoint values are preserved for future use, wrap them in the de
 /* -----------------------------------------------*/
 
 @wide: ~'(min-width:@{wideUnit})';
-@full: ~'(max-width:@{wideUnit})';
+@full: ~'(max-width:@{fullUnit})';
 @narrow: ~'(max-width:@{narrowUnit})';
 @compact: ~'(max-width:@{compactUnit})';
 @smallest: ~'(max-width:@{smallestUnit})';
