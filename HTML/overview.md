@@ -4,6 +4,8 @@
 * **Understanding Nunjucks Templating**
   * [Nunjucks Tempalting Docs (External)](http://mozilla.github.io/nunjucks/templating.html)
   * [Sandbox for Learning Nunjucks](https://github.com/kylestetz/templating-tutorial)
+  * [Pitfalls of Nunjucks (Coming Soon)](#)
 * **Keeping Templates Markup Modular**
   * [Extending Base Templates (Coming Soon)](#)
   * [Using Macros for Modularity (Coming Soon)](#)
+  
