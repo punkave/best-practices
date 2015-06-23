@@ -1,4 +1,4 @@
-# Frontend Development at P'unk Avenue
+# Best Practices in Development at P'unk Avenue
 
 ## What is this repo?
 This repo is a place to:
