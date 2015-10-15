@@ -3,6 +3,12 @@ Commenting is one of those things that we shouldn't have to think about too much
 
 ## File Headers
 At the top of each file, add a simple title comment letting other developers know what the general scope of the file is. To add a SublimeText snippet, follow the instructions [here](http://sublimetext.info/docs/en/extensibility/snippets.html), and to add an Atom Snippet, follow the instructions [here](https://github.com/atom/snippets).
+```less
+// ===============================================================
+// Here's a description of what the file does.
+// ===============================================================
+```
+
 ```cson
 # SublimeText Snippet
 <snippet>
@@ -28,6 +34,9 @@ At the top of each file, add a simple title comment letting other developers kno
 
 ## In-file Subtitles
 Occasionally (and it should only be occasionally), a LESS file can grow beyond a few simple rules. In those cases, we need to break up the file using section headers to help other developers make sense of your structural thinking.
+```less
+// Quick Subtitle  ===================================
+```
 ```cson
 # SublimeText Snippet
 <snippet>
