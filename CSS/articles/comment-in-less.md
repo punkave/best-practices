@@ -32,7 +32,7 @@ Occasionally (and it should only be occasionally), a LESS file can grow beyond a
 // SublimeText Snippet
 <snippet>
   <content><![CDATA[
-// $1 ===============================================================
+// $1 ===================================
 ]]></content>
   <tabTrigger>title</tabTrigger>
   <scope>source.less</scope>
