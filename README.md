@@ -7,7 +7,7 @@ This repo is a place to:
 3. and archive, summarize, and cite articles that have been particularly helpful in determining those best practices.
 
 ## What can I learn about?
-These files cover (for now) [HTML and Markup](HTML/overview.md), [CSS](CSS/overview.md), [JavaScript](JavaScript/overview.md), [performance](Performance/overview.md), and the [development environment](DevOps/overview.md). 
+These files cover (for now) [HTML and Markup](HTML/overview.md), [CSS](CSS/overview.md), [JavaScript](JavaScript/overview.md), [performance](Performance/overview.md), [version control](VersionControl/overview.md)and the [development environment](DevOps/overview.md).
 
 ## How can I contribute to this repo?
 Any developer at P'unk Avenue has write access to this repo, but we welcome any community contributions through pull requests.
