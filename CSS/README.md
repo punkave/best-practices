@@ -13,6 +13,7 @@ While LESS allows these conveniences, it also affords some anti-patterns that we
   * [Order of CSS Rules](articles/ordering-css-rules.md)
   * [Naming CSS Classes](articles/naming-css-classes.md)
 * **LESS**
+  * [Comments in LESS](articles/comment-in-less.md)
   * [Structuring LESS files (Coming Soon)](#)
   * [Nesting your LESS blocks (Coming Soon)](#)
 * **Responsive Styles**
