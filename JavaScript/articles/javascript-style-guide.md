@@ -108,6 +108,31 @@ If you don't care about jQuery, you can declare an anonymous function, then just
 
 This declares a function and calls it with no arguments, creating a separate namespace for your variables.
 
+## lodash
+
+The `lodash` module is always loaded in the browser when you work with Apostrophe, and is also available via npm in node. Always use `lodash` to minimize bugs by avoiding repetitive code. `lodash` is preferred over similar ES6 features because it is consistently available on every platform.
+
+WRONG-ISH:
+
+```javascript
+var i;
+for (i = 0; (i < things.length); i++) {
+  handleThing(things[i]);
+}
+```
+
+RIGHT:
+
+```javascript
+_.each(things, handleThing);
+```
+
+*What do you mean by wrong-ish?"* The "for" loop isn't actually incorrect, and there may be circumstances where it is preferred for performance. But these circumstances are rare. For the most part synchronous JavaScript code is never the source of our performance problems.
+
+`lodash` can also solve many other problems. Some of the methods used most often are `find`, `map`, `filter`, `pick` and `pluck`.
+
+**lodash is not for async programming!** See below for best practices on working with callback functions.
+
 ## Async
 
 ### Always be returning
