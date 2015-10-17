@@ -8,6 +8,34 @@ Let's start with the basics.
 
 Two spaces. Always. Not tabs. Set up your editor accordingly and it'll automatically do this for you.
 
+## Always use semicolons
+
+WRONG:
+
+```javascript
+var x
+doSomething()
+doSomethingElse()
+self.method = function() {
+  // code here
+}
+```
+
+RIGHT
+
+```javascript
+var x;
+doSomething();
+doSomethingElse();
+self.method = function() {
+  // code here
+};
+```
+
+JavaScript's rules for when you can skip `;` are baroque. It's better to be consistent with the style familiar to programmers in all of the languages that share a C-like syntax (JavaScript, Java, PHP, C, C++, Objective C, etc).
+
+Notice that a semicolon is correct after an assignment statement, even if we're assigning a function as the value.
+
 ## Always use curly braces
 
 WRONG:
@@ -171,8 +199,8 @@ doSomethingThen(function(err) {
     // handle err, then...
     doYetAnotherThingThen(function(err) {
       // handle err, then...
-    })
-  })
+    });
+  });
 });
 ```
 
