@@ -110,7 +110,7 @@ This declares a function and calls it with no arguments, creating a separate nam
 
 ## lodash
 
-The `lodash` module is always loaded in the browser when you work with Apostrophe, and is also available via npm in node. Always use `lodash` to minimize bugs by avoiding repetitive code. `lodash` is preferred over similar ES6 features because it is consistently available on every platform.
+The [lodash](https://lodash.com/docs) module is always loaded in the browser when you work with Apostrophe, and is also available via npm in node. Always use `lodash` to minimize bugs by avoiding repetitive code. `lodash` is preferred over similar ES6 features because it is consistently available on every platform.
 
 WRONG-ISH:
 
@@ -124,6 +124,8 @@ for (i = 0; (i < things.length); i++) {
 RIGHT:
 
 ```javascript
+var _ = require('lodash');
+
 _.each(things, handleThing);
 ```
 
