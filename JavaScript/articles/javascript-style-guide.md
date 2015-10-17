@@ -430,7 +430,7 @@ The same principle applies whether you're writing an Apostrophe site or not: use
 
 The [apostrophe-site](https://github.com/punkave/apostrophe-site) module README has good examples of how to create new A2 modules and subclass existing modules correctly. The boilerplate syntax is pretty annoying, so take advantage of this helpful template. In 0.6 it's not such a pain.
 
-### Always use `_` to mean "this property is temporary and should not be saved"
+### Always use `_` to mean "this property is temporary"
 
 WRONG:
 
