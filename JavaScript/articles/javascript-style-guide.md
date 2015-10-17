@@ -44,7 +44,7 @@ WRONG:
 if (test()) doTheThing();
 ```
 
-On one line, it's harder to read unless it's trivial. If you break it over multiple lines, and easier to wind up with bugs when you accidentally try to introduce a second statement. Apple got stuck with a famous security bug this way. Just don't use it.
+On one line, it's harder to read unless it's trivial. And if you break it over multiple lines, it is easier to wind up with bugs when you accidentally try to introduce a second statement. Apple got stuck with a famous security bug this way. Just don't use it.
 
 RIGHT:
 
