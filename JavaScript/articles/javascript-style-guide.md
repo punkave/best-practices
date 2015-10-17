@@ -36,6 +36,50 @@ To avoid confusion, always put your `var` statements *at the start of a function
 
 Declaring variables in nested functions is perfectly OK.
 
+## Always declare variables!
+
+Otherwise they are global, resulting in strange bugs and side effects.
+
+Ideally you should use [JSHint](http://jshint.com/) so that your editor tells you anytime you forget to use `var`.
+
+## No littering
+
+In browser-side JavaScript, do not litter the namespace with your own variables at "top level." This is likely to interfere with other code that is trying to do the same thing.
+
+In most cases your code should at least be inside a jQuery "DOM ready" function, which gives you your own "scope" for variables. You should do that anyway because jQuery may not be ready to let you access things otherwise.
+
+WRONG:
+
+```javascript
+var $coolThing = $('[data-cool-thing]');
+setInterval(function() {
+  twinkleCoolThing();
+}, 100);
+```
+
+RIGHT (without Apostrophe):
+
+```javascript
+$(function() {
+  var $coolThing = $('[data-cool-thing]');
+  setInterval(function() {
+    twinkleCoolThing();
+  }, 100);
+});
+```
+
+However, see "doing things when the page loads" for notes on the best way to do this with Apostrophe.
+
+If you don't care about jQuery, you can declare an anonymous function, then just run it:
+
+```javascript
+(function() {
+  // my code goes here
+})();
+```
+
+This declares a function and calls it with no arguments, creating a separate namespace for your variables.
+
 ## Async
 
 ### Always be returning
@@ -206,101 +250,9 @@ return async.eachLimit(things, 4, doSomethingToThing, function(err) {
 
 Here we're processing up to 4 things at a time. A good technique if you know you have, let's say, enough RAM to process four image imports at once.
 
-## node.js and Apostrophe (server side)
-
-### Always be requiring
-
-WRONG (this is an A2 0.5 example):
-
-```javascript
-var site = require('apostrophe-site')();
-
-site.init({
-  // Among other things...
-  pages: {
-    load: [
-      function(req, callback) {
-        // 200 lines of guff here
-      },
-      function(req, callback) {
-        // 200 more lines..
-      },
-    ]
-  }
-});
-```
-
-RIGHT:
-
-Every module can have its own `load` method.
-
-```javascript
-var site = require('apostrophe-site')();
-
-site.init({
-  // Among other things...
-
-  pages: {
-    load: [
-      require('./lib/loaders/myCatLoader.js')(site),
-      require('./lib/loaders/myDogLoader.js')(site)
-    ]
-  }
-});
-
-// In the SEPARATE FILE lib/loaders/myCatLoader.js
-
-module.exports = function(site) {
-  return function(req, callback) {
-    // 200 lines...
-    // You can use site.apos, etc.
-  });
-};
-```
-
-The same principle applies whether you're writing an Apostrophe site or not: use `require` to break up your code into units with meaningful names.
-
-### Creating modules in A2 0.5
-
-The [apostrophe-site](https://github.com/punkave/apostrophe-site) module README has good examples of how to create new A2 modules and subclass existing modules correctly. The boilerplate syntax is pretty annoying, so take advantage of this helpful template. In 0.6 it's not such a pain.
-
-### Always use `_` to mean "this property is temporary and should not be saved"
-
-WRONG:
-
-```javascript
-// Get some events from Apostrophe, then...
-_.each(events, function(event) {
-  if (event happens today...) {
-    event.happeningToday = true;
-  }
-});
-```
-
-This will clutter up the database if the event objects happen to get stored back to it.
-
-Mark it as temporary:
-
-RIGHT:
-
-```javascript
-// Get some events from Apostrophe, then...
-_.each(events, function(event) {
-  if (event happens today...) {
-    event._happeningToday = true;
-  }
-});
-```
-
-Now `apos.putPage` will know not to save it. *This is still true in A2 0.6 even though the method names have changed.*
-
-Some shops use leading `_` to mean "protected property," in the Java sense. Please don't. We tried this and it just became confusing over time.
-
 ## Using ES6 features
 
-Don't, unless you are pre-compiling them to ES5 first with a tool like Babel. Our clients need to support a variety of browsers and browser versions.
-
-NodeJS 4 does support a larger subset of ES6 than previously on the server side and you may experiment with that on the server side as long as you're comfortable keeping it separate in your mind from your browser-side techniques.
+Don't, yet. Unless you are pre-compiling them to ES5 first with a tool like Babel. Our clients need to support a variety of browsers and browser versions.
 
 *ES6 is a recently proposed version of JavaScript.*
 
@@ -421,4 +373,102 @@ between objects.
 ### 0.6 note
 
 In A2 0.6, we use [moog](https://github.com/punkave/moog) for OOP in the browser, and [moog-require](https://github.com/punkave/moog-require) to provide OOP for "Apostrophe modules" on the server. But these are just sophisticated versions of the "self pattern." So you should definitely get familiar with the above. Then check out the [moog documentation](https://github.com/punkave/moog) for more information.
+
+## node.js and Apostrophe (server side)
+
+### Always be requiring
+
+WRONG (this is an A2 0.5 example):
+
+```javascript
+var site = require('apostrophe-site')();
+
+site.init({
+  // Among other things...
+  pages: {
+    load: [
+      function(req, callback) {
+        // 200 lines of guff here
+      },
+      function(req, callback) {
+        // 200 more lines..
+      },
+    ]
+  }
+});
+```
+
+RIGHT:
+
+```javascript
+var site = require('apostrophe-site')();
+
+site.init({
+  // Among other things...
+
+  pages: {
+    load: [
+      require('./lib/loaders/myCatLoader.js')(site),
+      require('./lib/loaders/myDogLoader.js')(site)
+    ]
+  }
+});
+
+// In the SEPARATE FILE lib/loaders/myCatLoader.js
+
+module.exports = function(site) {
+  return function(req, callback) {
+    // 200 lines...
+    // You can use site.apos, etc.
+  });
+};
+```
+
+The same principle applies whether you're writing an Apostrophe site or not: use `require` to break up your code into units with meaningful names.
+
+### Creating modules in A2 0.5
+
+The [apostrophe-site](https://github.com/punkave/apostrophe-site) module README has good examples of how to create new A2 modules and subclass existing modules correctly. The boilerplate syntax is pretty annoying, so take advantage of this helpful template. In 0.6 it's not such a pain.
+
+### Always use `_` to mean "this property is temporary and should not be saved"
+
+WRONG:
+
+```javascript
+// Get some events from Apostrophe, then...
+_.each(events, function(event) {
+  if (event happens today...) {
+    event.happeningToday = true;
+  }
+});
+```
+
+This will clutter up the database if the event objects happen to get stored back to it.
+
+Mark it as temporary:
+
+RIGHT:
+
+```javascript
+// Get some events from Apostrophe, then...
+_.each(events, function(event) {
+  if (event happens today...) {
+    event._happeningToday = true;
+  }
+});
+```
+
+Now `apos.putPage` will know not to save it. *This is still true in A2 0.6 even though the method names have changed.*
+
+Some shops use leading `_` to mean "protected property," in the Java sense. Please don't. We tried this and it just became confusing over time.
+
+## Apostrophe on the browser side
+
+### Doing things when the page loads
+
+apos.on('ready', function() {
+  // Play with jQuery here
+});
+
+This is the right way to make sure your code runs every time the main content area of the page is refreshed. If you use `$(function() { ... })`, your code only runs on the first page load. Which leads to "you have to click refresh after you click save" syndrome. Which makes puppies cry. So do the right thing.
 
