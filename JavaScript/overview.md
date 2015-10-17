@@ -2,7 +2,7 @@
 
 ## Table of Contents
 * **Style Guide**
-  * [Following a JS Style Guide](articles/following-a-js-style-guide.md)
+  * [House JavaScript Style Guide](articles/javascript-style-guide.md)
 * **General JS Advice**
   * [Avoiding jQuery Pitfalls (Coming Soon)](articles/avoiding-jquery-pitfalls.md)
 * **Writing Sustainable Javascript**
