@@ -205,6 +205,8 @@ Spot the difference? `return callback(null)` is *not safe if your code has not r
 
 "Why?" Because every time you call a function, JavaScript has to remember where you called from on a "stack." And if you never return, but keep calling deeper and deeper, the "stack" eventually crashes. For instance, the first version of `handleTheThing` will probalby crash if you pass it to `async.eachSeries` with an array of 2000 things to process.
 
+*setImmediate is always available in the browser when working with Apostrophe. If you're working in the browser without Apostrophe, use a shim, or write: `setTimeout(callback, 0)`*
+
 ### Always use the async module
 
 The async module solves all the terrible problems you'll encounter with callback-based functions. Learn it, love it, use it.
