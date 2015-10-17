@@ -466,9 +466,11 @@ Some shops use leading `_` to mean "protected property," in the Java sense. Plea
 
 ### Doing things when the page loads
 
+```javascript
 apos.on('ready', function() {
   // Play with jQuery here
 });
+```
 
 This is the right way to make sure your code runs every time the main content area of the page is refreshed. If you use `$(function() { ... })`, your code only runs on the first page load. Which leads to "you have to click refresh after you click save" syndrome. Which makes puppies cry. So do the right thing.
 
