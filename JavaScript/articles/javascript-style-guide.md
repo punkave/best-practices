@@ -203,7 +203,7 @@ function handleTheThing(thing, callback) {
 
 Spot the difference? `return callback(null)` is *not safe if your code has not returned at least once already.* Basically: it is not safe if you haven't talked to a database, invoked `request`, or called some other async function.
 
-"Why?" Because every time you call a function, JavaScript has to remember where you called from on a "stack." And if you never return, but keep calling deeper and deeper, the "stack" eventually crashes. For instance, the first version of `handleTheThing` will probalby crash if you pass it to `async.eachSeries` with an array of 2000 things to process.
+"Why?" Because every time you call a function, JavaScript has to remember where you called from on a "stack." And if you never return, but keep calling deeper and deeper, the "stack" eventually crashes. For instance, the first version of `handleTheThing` will probably crash if you pass it to `async.eachSeries` with an array of 2000 things to process.
 
 *setImmediate is always available in the browser when working with Apostrophe. If you're working in the browser without Apostrophe, use a shim, or write: `setTimeout(callback, 0)`*
 
@@ -345,7 +345,7 @@ Key things going on here:
 
 * The constructor takes one argument, `options`, which is an object. This makes it easier to extend the code without bc breaks (*backwards compatibility*).
 
-* The `this` keyword is used exactly once, to capture the object in `self`, a lexically scoped variable that always refers to the same things, *even in a callback function or jQuery event handler*. And we never, ever use it again.
+* The `this` keyword is used exactly once, to capture the object in `self`, a lexically scoped variable that always refers to the same thing, *even in a callback function or jQuery event handler*. And we never, ever touch `this` again. Learn to love `self`, as the lady sings.
 
 * You can have "private properties" of the class just by using `var` statements in the constructor. You can also have "public properties" by setting properties of `self`.
 
@@ -372,6 +372,7 @@ Key points:
 
 * The subclass has to call the parent class constructor function. The `call` method invokes `Dog` with `this` set to the same object as your new `Doge`. It is very rare for us to have to use `call` or `apply` anywhere else.
 * We can override any method of `Dog` that we don't like here just by reassigning it.
+* It's common to set defaults in the `options` object before invoking the parent class constructor with `call`. Usually this is the only thing we do before invoking the parent class constructor.
 
 ### Extending a method
 
@@ -423,9 +424,7 @@ var doge = new Doge('doge');
 setTimeout(doge.meme, 1000);
 ```
 
-This wouldn't work in code that uses prototypal inheritance. We would have to write a special inline function because `this` has a different value in a timeout callback function. With the `self` pattern it just works.
-
-between objects.
+This wouldn't work in code that uses prototypal inheritance. We would have to write a special inline function because `this` has a different value in a timeout callback function. But with the `self` pattern it just works.
 
 ### 0.6 note
 
