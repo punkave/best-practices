@@ -1,5 +1,7 @@
 # Accessibility
 
+[WCAG 2.0](https://www.w3.org/TR/WCAG20/)
+
 ## Table of Contents
   1. [Language Attribute](#language-attribute)
   2. [Document Outline](#document-outline)
