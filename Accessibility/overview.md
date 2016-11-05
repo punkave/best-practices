@@ -5,7 +5,7 @@
   2. [Document Outline](#document-outline)
   3. [Wayfinding](#wayfinding)
   4. [Images](#images)
-  5. [ARIA](#landmarks) 
+  5. [ARIA](#aria) 
   6. [Links](#links)
   7. [JavsScript](#javascript) 
 
