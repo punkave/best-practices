@@ -1,8 +1,8 @@
 # Accessibility
 
 ## Table of Contents
-  1. [Language Attribute](#languageAttribute)
-  2. [Document Outline](#documentOutline)
+  1. [Language Attribute](#language-attribute)
+  2. [Document Outline](#document-outline)
   3. [Wayfinding](#wayfinding)
   4. [Images](#images)
   5. [ARIA](#landmarks) 
