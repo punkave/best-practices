@@ -2,63 +2,63 @@
 
 ## Table of Contents
   1. [Language Attribute](#languageAttribute)
-  1. [Images](#images)
-  1. [ARIA](#landmarks)
-  1. [Wayfinding](#wayfinding)
-  1. [Links](#links)
-  1. [JavsScript](#javascript)
-  1. [Document Outline](#documentOutline)
+  2. [Document Outline](#documentOutline)
+  3. [Wayfinding](#wayfinding)
+  4. [Images](#images)
+  5. [ARIA](#landmarks) 
+  6. [Links](#links)
+  7. [JavsScript](#javascript) 
 
 ## Language Attribute
 
-  - [x.x] Declare a language attribute on the html element so screen readers can use correct pronunciation
+  - [1.1](#languageAttribute--definition) Declare a language attribute on the html element so screen readers can use correct pronunciation
 
 **[⬆ back to top](#table-of-contents)**
 
-## Images
+## Document Outline
 
-  - [x.x] Use `<img></img>` for images that are content. Use CSS background images for design "chrome".
-  
-  - [x.x] Use alternative text for any image used as content. Alternative text should provide a description of the image.
-
-**[⬆ back to top](#table-of-contents)**
-
-## ARIA
-
-  - [x.x] - Use ARIA Landmark roles to help assistive technologies navigate a website
+  - [2.1](#documentOutline--definition) Use semantic headings and structure
 
 **[⬆ back to top](#table-of-contents)**
 
 ## Wayfinding
 
-  - [x.x] Document should be navigable by keyboard
+  - [3.1](#wayfinding--definition) Document should be navigable by keyboard
+
+**[⬆ back to top](#table-of-contents)**
+
+## Images
+
+  - [4.1](#images--html) Use `<img></img>` for images that are content. Use CSS background images for design "chrome".
+  
+  - [4.2](#images--alternatives) Use alternative text for any image used as content. Alternative text should provide a description of the image.
+
+**[⬆ back to top](#table-of-contents)**
+
+## ARIA
+
+  - [5.1](#aria--definition) - Use ARIA Landmark roles to help assistive technologies navigate a website
 
 **[⬆ back to top](#table-of-contents)**
 
 ## Links 
  
-  - [x.x] Links should have a focus state `:focus`
+  - [6.1](#links--focus-state) Links should have a focus state `:focus`
   
-  - [x.x] Links in "body" text should be underlined
+  - [6.2](#links--in-body) Links in "body" text should be underlined
   
-  - [x.x] Link purpose should be clear from the link text alone
+  - [6.3](#links--purpose) Link purpose should be clear from the link text alone
 
 **[⬆ back to top](#table-of-contents)**
 
 ## JavaScript
  
-  - [x.x] Use unobtrusive JavaScript
+  - [7.1](#javascript--unobtrusive) Use unobtrusive JavaScript
   
-  - [x.x] Provide `no-js` alternatives for users that don't have JavaScript enabled
+  - [7.2](#javascript--alternative) Provide `no-js` alternatives for users that don't have JavaScript enabled
   
-  - [x.x] Use device agnostic events such as `onclick` and `onfocus`
+  - [7.3](#javascript--events) Use device agnostic events such as `onclick` and `onfocus`
   
-  - [x.x] Provide keyboard alternative events
+  - [7.4](#javascript--keyboard-events) Provide keyboard alternative events
 
   **[⬆ back to top](#table-of-contents)**
-
-## Document Outline
-
-  - [x.x] Use semantic headings and structure
-
-**[⬆ back to top](#table-of-contents)** 
