@@ -70,58 +70,65 @@ _Here, we would link into specific articles with more in-depth information_
 * Workflow for frontend-only / static site builds 
 * What to do when your client needs a placeholder site before their full-featured a2 build
 
-## House Style Rules 
-### <a name="house-css">CSS Selector strucutre</a>
+# House Style Rules 
+## <a name="house-css">CSS Selector strucutre</a>
   * ITCSS
-### <a name="house-javascript">Javascript</a>
+  
+## <a name="house-javascript">Javascript</a>
   * nest things in apos events where applicable
   * never attach anything to the global namespace
   * use data attributes for js selectors
   * use .find to keep your jquery scopes tight
   * be good at async
-### <a name="house-markup">Markup</a>
+  
+## <a name="house-markup">Markup</a>
   * html 5 elements like header, footer, etc.
   * when to use divs, spans, uls, you should know this
-### <a name="house-sizes">Sizes</a>
+  
+## <a name="house-sizes">Sizes</a>
   * rems, ems, px, %, when to use what
-### <a name="house-naming">Naming less variables</a>
+  
+## <a name="house-naming">Naming less variables</a>
   * general to specific
   * use names like `brand-primary` and `brand-secondary` for colors
-### <a name="house-grid">Our Grid</a>
+  
+## <a name="house-grid">Our Grid</a>
 
-## Setting up a new project
-* Using Apostrophe CLI / client boilerplate
-* Importing the final launch checklist
-* Setting up package.json
+# Setting up a new project
+
+## Using Apostrophe CLI / client boilerplate
+
+## Importing the final launch checklist
+## Setting up package.json
   * including dependencies
   * configuring start script `npm start` vs `node app`
-* Setting up app.js
+  
+## Setting up app.js
   * shortnames
   * security
   * other config stuff
-* Project folder structure
+  
+## Project folder structure
   * components / macros
   * pages
   * less
   * client-side js
-* Naming modules
+  
+## Naming modules
 
-#### Front-end Styleguides
+# Front-end Styleguides
+???
 
-#### Responsive 
-* Mobile
+# Responsive 
+### Mobile
   * The bare minimums
   * naming your breakpoints
   * where to put responsive styles
 
-* Cross Browser 
+### Cross Browser 
   * The bare minimums
   * Tools we use for testing
 
-* Accessibility
+### Accessibility
   * The bare minimums
   * Docs for WCAG etc.
-
-
-
-
