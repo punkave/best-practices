@@ -1,17 +1,118 @@
-# Best Practices in Development at P'unk Avenue
+:pray::pray::pray:
 
-## What is this repo?
-This repo is a place to:
-1. describe our currently perceived best practices in frontend development,
-2. ask questions about said best practice,
-3. and archive, summarize, and cite articles that have been particularly helpful in determining those best practices.
+## How to add to this repo
 
-## What can I learn about?
-These files cover (for now) [HTML and Markup](HTML/overview.md), [CSS](CSS/overview.md), [JavaScript](JavaScript/overview.md), [performance](Performance/overview.md), [version control](VersionControl/overview.md)and the [development environment](DevOps/overview.md).
+* Discuss topic with group duing Thursday morning meeting
+* Someone on the team should capture notes in a Github issue discussion and supply a few code examples for further discussion
+* Create a pull request to this repo with changes or additions reflecting the consensus of the group
 
-## How can I contribute to this repo?
-Any developer at P'unk Avenue has write access to this repo, but we welcome any community contributions through pull requests.
+## Our Guiding Pricipals
 
-## Who is P'unk Avenue?
-P'unk Avenue is a design and build firm with a special focus on positive social impact, urbanism, health & wellness, arts & culture, and education.
-We proudly work on and maintain Apostrophe, a content management system that helps individuals and organizations stay on mission.
+We use these as a lense with which to examine potential best practices:
+
+* 1.
+* 2.
+* 3.
+* 4.
+* 5.
+
+# Table of Contents
+
+_Instead of having our content buried in folders, I'm proposing we pull the majority of it out onto this main README page. Below, I have built out a table of contents suggesting the topics we should cover with a few breif sentences and some code examples. Under some topics/sections, I started to bullet out points we might want to cover._
+
+#### [House Style Rules](#house)
+* [CSS Selector strucutre](#house--css)
+* [Javascript](#house--javascript)
+* [Markup](#house--markup)
+* [Sizes](#house--sizes)
+* [Naming less variables](#house--naming)
+* [Our Grid](#house--grid)
+
+#### [Setting up a new project](#newProject)
+* [Using Apostrophe CLI / client boilerplate](#newProject--cli)
+* [Importing the final launch checklist](#newProject--checklist)
+* [Setting up package.json](#newProject--package)
+* [Setting up app.js](#newProject--app)
+* [Project folder structure](#newProject--folders)
+* [Naming modules](#newProject--naming)
+
+#### [Front-end Styleguides](#styleguides)
+
+#### [Responsive](#responsive)
+* [Mobile](#responsive--mobile)
+* [Cross Browser](#responsive--xbrowser)
+* [Accessibility](#responsive--accesibility)
+
+#### Special topics
+_Here, we would link into specific articles with more in-depth information_
+
+* [Performance in Apostrophe](#)
+* [Accesibility](#)
+* [Importing spreadsheet data into apostrophe-pieces based content types](#)
+* [Workflow for frontend-only / static site builds](#)
+* [What to do when your client needs a placeholder site before their full-featured a2 build](#)
+
+
+# <a name="house">House Style Rules 
+## <a name="house--css">CSS Selector strucutre</a>
+  * ITCSS
+  
+## <a name="house--javascript">Javascript</a>
+  * nest things in apos events where applicable
+  * never attach anything to the global namespace
+  * use data attributes for js selectors
+  * use .find to keep your jquery scopes tight
+  * be good at async
+  
+## <a name="house--markup">Markup</a>
+  * html 5 elements like header, footer, etc.
+  * when to use divs, spans, uls, you should know this
+  
+## <a name="house--sizes">Sizes</a>
+  * rems, ems, px, %, when to use what
+  
+## <a name="house--naming">Naming less variables</a>
+  * general to specific
+  * use names like `brand-primary` and `brand-secondary` for colors
+  
+## <a name="house--grid">Our Grid</a>
+
+# <a name="newProject">Setting up a new project</a>
+
+## <a name="newProject--cli">Using Apostrophe CLI / client boilerplate</a>
+
+## <a name="newProject--checklist">Importing the final launch checklist</a>
+
+## <a name="newProject--package">Setting up package.json</a>
+  * including dependencies
+  * configuring start script `npm start` vs `node app`
+  
+## <a name="newProject--app">Setting up app.js</a>
+  * shortnames
+  * security
+  * other config stuff
+  
+## <a name="newProject--folders">Project folder structure</a>
+  * components / macros
+  * pages
+  * less
+  * client-side js
+  
+## <a name="newProject--naming">Naming modules</a>
+
+# <a name="styleguides">Front-end Styleguides</a>
+???
+
+# <a name="responsive">Responsive</a>
+### <a name="responsive--mobile">Mobile</a>
+  * The bare minimums
+  * naming your breakpoints
+  * where to put responsive styles
+
+### <a name="responsive--xbrowser">Cross Browser</a>
+  * The bare minimums
+  * Tools we use for testing
+
+### <a name="responsive--accessibility">Accessibility</a>
+  * The bare minimums
+  * Docs for WCAG etc.
