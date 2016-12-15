@@ -57,7 +57,7 @@ _Here, we would link into specific articles with more in-depth information_
 
 ## <a name="house--css">CSS Architecture</a>
 
-Use Harry Robert's ITCSS Architecture to author CSS. ITCSS provides a way to manage common issues that crop up caused by source order, cascade and specificity for large scale projects.
+Use Harry Robert's ITCSS Architecture to author CSS. ITCSS provides a way to manage common issues that crop up caused by source order, cascade and specificity in large scale projects.
 
 ITCSS organizes CSS into eight "groups" that can even used to organize your LESS folders if you wish. The main goal is that the compiled CSS file is structured (top to bottom) in order of specificity.
 
@@ -69,7 +69,7 @@ ITCSS organizes CSS into eight "groups" that can even used to organize your LESS
 - **Components** - One off designed components (footer, header, etc.)
 - **Utilities** - Single purpose (immutable) selectors
 
-Another helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using these group names so that it's easy to identify the role of a selector in markup.
+It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using these group names so that it's easy to identify the role of a selector in markup.
 
 ## <a name="house--javascript">Javascript</a>
   * nest things in apos events where applicable
