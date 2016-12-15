@@ -61,13 +61,13 @@ Use Harry Robert's ITCSS Architecture to author CSS. ITCSS provides a way to man
 
 ITCSS organizes CSS into eight "groups" that can even used to organize your LESS folders if you wish. The main goal is that the compiled CSS file is structured (top to bottom) in order of specificity.
 
-*Settings* - Variables
-*Tools* - Mixins
-*Generic* - Ground zero styles (normalize.css, resets)
-*Base* - Unclassed HTML elements
-*Objects* - UI Abstractions (object-oriented css)
-*Components* - One off designed components (footer, header, etc.)
-*Utilities* - Single purpose (immutable) selectors
+- *Settings* - Variables
+- *Tools* - Mixins
+- *Generic* - Ground zero styles (normalize.css, resets)
+- *Base* - Unclassed HTML elements
+- *Objects* - UI Abstractions (object-oriented css)
+- *Components* - One off designed components (footer, header, etc.)
+- *Utilities* - Single purpose (immutable) selectors
 
 Another helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using these group names so that it's easy to identify the role of a selector in markup.
 
