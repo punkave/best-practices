@@ -8,13 +8,15 @@
 
 ## Our Guiding Pricipals
 
-We use these as a lense with which to examine potential best practices:
+We use these as a lens with which to examine potential best practices:
 
-* 1.
-* 2.
-* 3.
-* 4.
-* 5.
+* ***Elegance*** - We design and build beautifully elegant applications and websites, this beauty should extend to the codebase as well.
+* ***Speed*** - We move quickly. We hit our milestones. We ship.
+* ***Pragmatism*** - We are pragmatic in our solutions. We don't over-engineer things. No reinventing the wheel. No yak shaving.
+* ***Maintainability*** - We maintain relationship with projects over years. This means we write maintainable code: well organized, well documented.
+* ***Innovation*** - We look for opportunities to experiment with emerging technologies and techniques. We learn.
+
+Also see the [Pragmatic Programmer](http://www.ccs.neu.edu/home/lieber/courses/csg110/sp08/Pragmatic%20Quick%20Reference.htm) Quick Reference Guide for additional rules to live by.
 
 # Table of Contents
 
@@ -77,18 +79,18 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
   * use data attributes for js selectors
   * use .find to keep your jquery scopes tight
   * be good at async
-  
+
 ## <a name="house--markup">Markup</a>
   * html 5 elements like header, footer, etc.
   * when to use divs, spans, uls, you should know this
-  
+
 ## <a name="house--sizes">Sizes</a>
   * rems, ems, px, %, when to use what
-  
+
 ## <a name="house--naming">Naming less variables</a>
   * general to specific
   * use names like `brand-primary` and `brand-secondary` for colors
-  
+
 ## <a name="house--grid">Our Grid</a>
 
 # <a name="newProject">Setting up a new project</a>
@@ -100,18 +102,18 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
 ## <a name="newProject--package">Setting up package.json</a>
   * including dependencies
   * configuring start script `npm start` vs `node app`
-  
+
 ## <a name="newProject--app">Setting up app.js</a>
   * shortnames
   * security
   * other config stuff
-  
+
 ## <a name="newProject--folders">Project folder structure</a>
   * components / macros
   * pages
   * less
   * client-side js
-  
+
 ## <a name="newProject--naming">Naming modules</a>
 
 # <a name="styleguides">Front-end Styleguides</a>
