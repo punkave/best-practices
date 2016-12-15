@@ -2,9 +2,9 @@
 
 ## How to add to this repo
 
-* Discuss topic with group duing Thursday morning meeting
-* Someone on the team should capture notes in a Github issue discussion and supply a few code examples for further discussion
-* Create a pull request to this repo with changes or additions reflecting the consensus of the group
+* Discuss topic with group during regular developer meeting or open a GitHub issue to begin discussion
+* If discussed during the meeting, someone on the team should capture notes in a GitHub issue discussion and supply a few code examples for further "offline" discussion
+* The developer responsible for the topic creates a pull request to this repo with changes or additions reflecting the consensus of the group
 
 ## Our Guiding Pricipals
 
