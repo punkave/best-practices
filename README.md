@@ -10,11 +10,11 @@
 
 We use these as a lens with which to examine potential best practices:
 
-* ***Elegance*** - We design and build beautifully elegant applications and websites, this beauty should extend to the codebase as well.
-* ***Speed*** - We move quickly. We hit our milestones. We ship.
-* ***Pragmatism*** - We are pragmatic in our solutions. We don't over-engineer things. No reinventing the wheel. No yak shaving.
-* ***Maintainability*** - We maintain relationship with projects over years. This means we write maintainable code: well organized, well documented.
-* ***Innovation*** - We look for opportunities to experiment with emerging technologies and techniques. We learn.
+* **Elegance** - We design and build beautifully elegant applications and websites, this beauty should extend to the codebase as well.
+* **Speed** - We move quickly. We hit our milestones. We ship.
+* **Pragmatism** - We are pragmatic in our solutions. We don't over-engineer things. No reinventing the wheel. No yak shaving.
+* **Maintainability** - We maintain relationship with projects over years. This means we write maintainable code: well organized, well documented.
+* **Innovation** - We look for opportunities to experiment with emerging technologies and techniques. We learn.
 
 Also see the [Pragmatic Programmer](http://www.ccs.neu.edu/home/lieber/courses/csg110/sp08/Pragmatic%20Quick%20Reference.htm) Quick Reference Guide for additional rules to live by.
 
