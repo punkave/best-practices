@@ -327,11 +327,11 @@ There are many object-oriented programming styles in JavaScript, because the lan
 
 Most styles do depend on the `this` keyword, which is basically broken for asynchronous programming.
 
-Our house style avoids this problem at a very small cost in performance. We've never seen that matter in practice, even with tens of thousands of objects in play.
+Our house style avoids this problem at a small cost in performance. We've never seen that matter in practice, even with tens of thousands of objects in play.
 
 It's often described as the "self pattern." It's also a form of "concatenative inheritance."
 
-Here's a simple "class" following our style:
+Here's a simple "class" following the "self pattern:"
 
 ```javascript
 function Dog(options) {
@@ -434,30 +434,67 @@ setTimeout(doge.meme, 1000);
 
 This wouldn't work in code that uses prototypal inheritance. We would have to write a special inline function because `this` has a different value in a timeout callback function. But with the `self` pattern it just works.
 
-### In Apostrophe 2.x
+### OOP in Apostrophe 2.x
 
-In A2 2.x, we use [moog](https://github.com/punkave/moog) for OOP in the browser, and [moog-require](https://github.com/punkave/moog-require) to provide OOP for "Apostrophe modules" on the server. But these are just sophisticated versions of the "self pattern." So you should definitely get familiar with the above. Then check out the [moog documentation](https://github.com/punkave/moog) for more information.
+In A2 2.x, we use [moog](https://github.com/punkave/moog) for OOP in the browser, and [moog-require](https://github.com/punkave/moog-require) to provide OOP for Apostrophe modules on the server. But these are just sophisticated versions of the "self pattern." So you should definitely get familiar with the self pattern. Then check out the [moog documentation](https://github.com/punkave/moog) for more information.
+
+It all boils down to this (on the server side):
+
+```javascript
+// in lib/modules/mymodule/index.js
+
+module.exports = {
+  beforeConstruct: function(self, options) {
+    // Our chance to massage the `options` object before the base class sees it
+  }
+  afterConstruct: function(self) {
+    // Call some methods if we need to do things right after the module is created
+  },
+  construct: function(self, options) {
+    // Add some methods
+    self.bark = function() {
+      ...
+    };
+    self.jump = function() {
+      ...
+    };
+  }
+};
+```
+
+The browser side is very similar:
+
+```javascript
+apos.define('apostrophe-admin-bar', {
+
+  afterConstruct: function(self) {
+    self.enhance();
+  },
+
+  construct: function(self, options) {
+    self.enhance = function() {
+      ...
+    };
+  }
+  
+});
+```
 
 ## node.js and Apostrophe (server side)
 
-### Always be requiring
+### (Almost) nothing belongs in `app.js`
 
-WRONG (this is an A2 0.5 example):
+Your `app.js` file should pass empty objects (`{}`) when configuring modules. The configuration for a module should live in `lib/modules/modulename/index.js`.
+
+### Don't fight the module pattern
+
+WRONG:
 
 ```javascript
-var site = require('apostrophe-site')();
-
-site.init({
-  // Among other things...
-  pages: {
-    load: [
-      function(req, callback) {
-        // 200 lines of guff here
-      },
-      function(req, callback) {
-        // 200 more lines..
-      },
-    ]
+var apos = require('apostrophe')({
+  modules: {
+    // THIS IS BAD
+    cars: require('./lib/modules/cars/config.js')
   }
 });
 ```
@@ -465,30 +502,68 @@ site.init({
 RIGHT:
 
 ```javascript
-var site = require('apostrophe-site')();
-
-site.init({
-  // Among other things...
-
-  pages: {
-    load: [
-      require('./lib/loaders/myCatLoader.js')(site),
-      require('./lib/loaders/myDogLoader.js')(site)
-    ]
+var apos = require('apostrophe')({
+  modules: {
+    cars: {}
   }
 });
+```
 
-// In the SEPARATE FILE lib/loaders/myCatLoader.js
+**Apostrophe automatically loads `lib/modules/cars/index.js`.** Put your configuration there. If you have a lot of methods, it is OK to use `require` in that file:
 
-module.exports = function(site) {
-  return function(req, callback) {
-    // 200 lines...
-    // You can use site.apos, etc.
-  });
+```javascript
+// in lib/modules/cars/index.js
+module.exports = {
+  extend: 'apostrophe-pieces',
+  name: 'car',
+  someOptionName: 'someValue',
+  // Lots more options here, then...
+  construct: function(self, options) {
+    require('./api.js')(self, options);
+  }
+}
+
+// in lib/modules/cars/api.js
+```
+module.exports = function(self, options) {
+  self.honk = function() { ... };
 };
 ```
 
-The same principle applies whether you're writing an Apostrophe site or not: use `require` to break up your code into units with meaningful names.
+### Everything belongs in a module
+
+In A2 2.x, each distinct concern should be implemented in its own module. There is an `afterInit` option available in `app.js`, but using it is a bad code smell. You should write a module instead.
+
+If your module doesn't make sense as an extension of `apostrophe-pieces`, `apostrophe-custom-pages` or any other standard base class in Apostrophe, write a new module that doesn't extend any other:
+
+```javascript
+// lib/modules/mymodule/index.js
+
+module.exports = {
+  afterConstruct: function(self) {
+    // Call some methods
+  },
+  construct: function(self, options) {
+    // Add some methods
+  } 
+};
+```
+
+**All modules extend `apostrophe-module` by default**, so you can still call `render()`, etc.
+
+You can provide an `afterInit` method in your module if you need to do stuff at startup after other modules are awake:
+
+```
+// lib/modules/mymodule/index.js
+
+module.exports = {
+  construct: function(self, options) {
+    self.afterInit = function(callback) {
+      // Do stuff, then invoke callback
+    };
+  } 
+};
+```
 
 ### Creating modules in A2 0.5
 
@@ -507,9 +582,9 @@ _.each(events, function(event) {
 });
 ```
 
-This will clutter up the database if the event objects happen to get stored back to it.
+This will clutter up the database with stale information (or worse) if the event objects get stored back to it.
 
-Mark it as temporary:
+So mark it as temporary:
 
 RIGHT:
 
@@ -522,21 +597,46 @@ _.each(events, function(event) {
 });
 ```
 
-Now `apos.putPage` will know not to save it. *This is still true in A2 0.6 even though the method names have changed.*
+Now Apostrophe knows not to save it.
 
-Some shops use leading `_` to mean "protected property," in the Java sense. Please don't. We tried this and it just became confusing over time.
+**Some shops use leading `_` to mean "protected property," in the Java sense. Please don't.** We tried this and it just became confusing over time.
 
 ## Apostrophe on the browser side
 
 ### Doing things when the page loads
 
+WRONG:
+
 ```javascript
-apos.on('ready', function() {
-  // Play with jQuery here
+$('.foo').on('click', function() {
+  
 });
 ```
 
-This is the right way to make sure your code runs every time the main content area of the page is refreshed. If you use `$(function() { ... })`, your code only runs on the first page load. Which leads to "you have to click refresh after you click save" syndrome. Which makes puppies cry. So do the right thing.
+The above code will only add an event handler to `.foo` if it is already on the page. This will fail if `.foo` is added later, for instance via the editor.
+
+RIGHT:
+
+```javascript
+$('body').on('click', '.foo', function() {
+  
+});
+```
+
+The above code uses jQuery event delegation to catch all clicks on elements matching `.foo`, **even if they don't exist when this code is first called.**
+
+ALSO RIGHT:
+
+```javascript
+apos.on('enhance', function($el) {
+  $el.find('.foo').each(function() {
+    var $foo = $(this);
+    // Do something really fancy with $foo, like progressive enhancement
+  });
+});
+```
+
+Sometimes event delegation isn't enough. For those situations, use the Apostrophe `enhance` event, which fires every time Apostrophe adds new content to the page. `$el` will be the container element that has just been repopulated. 
 
 ### Tools you can count on (so don't re-install them)
 
@@ -559,7 +659,7 @@ And a long list of jQuery plugins:
 [droppable]
 sortable
 alterClass
-jCrop
+cropper
 bottomless
 cookie
 fileupload
@@ -571,13 +671,74 @@ radio
 scrollintoview
 selective
 
-### Avoiding jQuery Pitfalls (coming soon)
+### Avoiding jQuery Pitfalls
 
-* Cache everything
-* Scope selectors using `find`
-* Attach events to content that may/may not exist
-* Write performant scroll handlers
+#### Use `self.$el.find()`, never `$()`
 
-### Keeping Your Frontend JS Modular (the 2.x way)
+When you are extending `apostrophe-modal`, **work within `self.$el`**. Don't use leaky jQuery code that accidentally targets other elements. Using `find` makes this easy.
 
-Coming Soon
+WRONG:
+
+```javascript
+$('.my-thing').on('click', function() {
+  
+});
+```
+
+RIGHT:
+
+```javascript
+self.$el.find('.my-thing').on('click', function() {
+  
+});
+```
+
+#### Cache things
+
+WRONG:
+
+```javascript
+self.beforeShow = function(callback) {
+  self.$el.find('[data-open]').on('click', function() {
+    self.$el.find('[data-list]').show();
+    self.$el.find('[data-open]').hide();
+    self.$el.find('[data-show]').show();
+  });
+  self.$el.find('[data-close]').on('click', function() {
+    self.$el.find('[data-hide]').show();
+    self.$el.find('[data-close]').hide();
+    self.$el.find('[data-open]').show();
+  });
+  return setImmediate(callback);
+};
+```
+
+All this repetition is unmaintainable and bug-prone.
+
+RIGHT:
+
+```javascript
+self.beforeShow = function(callback) {
+
+  self.$open = self.$el.find('[data-open]');
+  self.$list = self.$el.find('[data-list]');
+  self.$close = self.$el.find('[data-close]');
+
+  self.$open.on('click', function() {
+    $list.show();
+    $open.hide();
+    $close.show();
+  });
+
+  self.$close.on('click', function() {
+    $list.hide();
+    $open.show();
+    $close.hide();
+  });
+
+  return setImmediate(callback);
+};
+```
+
+#### TODO: write performant scroll handlers
+
