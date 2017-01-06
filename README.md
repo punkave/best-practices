@@ -26,7 +26,7 @@ _I kept JavaScript in a separate file so far because it is extensive. -Tom_
 
 #### [House Style Rules](#house)
 * [CSS Architecture](#house--css)
-* [Javascript](javascript/overview.md)
+* [Javascript](JavaScript/overview.md)
 * [Markup](#house--markup)
 * [Sizes](#house--sizes)
 * [Naming less variables](#house--naming)
