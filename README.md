@@ -134,7 +134,7 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
 
 # <a name="newProject">Setting up a new project</a>
 
-## <a name="newProject-shortname">Choosing the shortname (and everything-name) of your project</a>
+## <a name="newProject--shortname">Choosing the shortname (and everything-name) of your project</a>
 
 The "shortname" of your project, like "ccd" or "pogil" or "thenotebook", must also be the name of the repo, the name of the database, the name of the directory on the server (and on your hard drive), and the name of everything else that requires a unique name for the project. Do everything you can to avoid diverging on this point.
 
@@ -142,7 +142,7 @@ The shortname may contain lowercase letters, digits, and hyphens. Nothing else.
 
 The shortname should be short, but consistency is even more important than brevity.
 
-## <a name="newProject-2">Forking a project to start a "2.0 version" while "1.0" lives on</a>
+## <a name="newProject--2">Forking a project to start a "2.0 version" while "1.0" lives on</a>
 
 **If a project is "forked," for instance to create a full site from a placeholder site, and the placeholder site continues to be live in the meantime, the shortname / database name / everything name must be different for the fork.** This avoids ugliness when we inevitably want to deploy the new site side by side with the old during a transitional period as new content is created.
 
