@@ -52,7 +52,7 @@ _I kept JavaScript in a separate file so far because it is extensive. -Tom_
 #### [Production](#production)
 * [Overview and tools used](#production)
 * [Production DNS](#production--dns)
-* [Production Platform](#production--dns)
+* [Production Platform](#production--platform)
 * [Production Multicore](#production--multicore)
 
 # <a name="production">Production overview and tools used</a>
