@@ -8,6 +8,10 @@ Let's start with the basics.
 
 Two spaces. Always. Not tabs. Set up your editor accordingly and it'll automatically do this for you.
 
+## Quoted strings
+
+Use single quotes. They are easier to type, and a consistent convention simplifies searches for quoted strings as well as documentation generation.
+
 ## Always use semicolons
 
 WRONG:
