@@ -53,6 +53,7 @@ _Here, we would link into specific articles with more in-depth information_
 * [Importing spreadsheet data into apostrophe-pieces based content types](#)
 * [Workflow for frontend-only / static site builds](#)
 * [What to do when your client needs a placeholder site before their full-featured a2 build](#)
+* [Git Workflow](#git-workflow)
 
 
 # <a name="house">House Style Rules
@@ -132,3 +133,30 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
 ### <a name="responsive--accessibility">Accessibility</a>
   * The bare minimums
   * Docs for WCAG etc.
+  
+-----
+
+### <a name="git-workflow">Git Workflow</a>
+
+  To get a new feature branch started:
+
+  ```
+  git checkout master
+  git pull origin master
+  git checkout -b feature/my-feature-branch
+  ... write lots of code, many commits ...
+  ```
+
+  When you are ready to have code reviewed:
+
+  ```
+  git checkout master
+  git pull origin master
+  git checkout feature/my-feature-branch
+  git rebase -i master
+  git push origin feature/my-feature-branch -f # force needed if remote already exists since you are re-writing history
+  ```
+  Then create a PR in github.
+
+  Once you are done with the code review, time to merge onto master!
+
