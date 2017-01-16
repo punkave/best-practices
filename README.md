@@ -45,6 +45,9 @@ _Instead of having our content buried in folders, I'm proposing we pull the majo
 * [Cross Browser](#responsive--xbrowser)
 * [Accessibility](#responsive--accesibility)
 
+#### [Collaborative Coding](#collaboration)
+* [Git Workflow](#collaboration--git)
+
 #### Special topics
 _Here, we would link into specific articles with more in-depth information_
 
@@ -53,7 +56,6 @@ _Here, we would link into specific articles with more in-depth information_
 * [Importing spreadsheet data into apostrophe-pieces based content types](#)
 * [Workflow for frontend-only / static site builds](#)
 * [What to do when your client needs a placeholder site before their full-featured a2 build](#)
-* [Git Workflow](#git-workflow)
 
 
 # <a name="house">House Style Rules
@@ -134,9 +136,8 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
   * The bare minimums
   * Docs for WCAG etc.
   
------
-
-### <a name="git-workflow">Git Workflow</a>
+# <a name="collaboration">Collaborative Coding</a>
+### <a name="collaboration--git">Git Workflow</a>
 
   To get a new feature branch started:
 
