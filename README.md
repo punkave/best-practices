@@ -139,7 +139,7 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
 # <a name="collaboration">Collaborative Coding</a>
 ### <a name="collaboration--git">Git Workflow</a>
 
-  Some basic rules:
+  Some basic rules to follow when developing on teams:
   
   * Anything in the master branch is deployable
   * To work on something new, create a descriptively named branch off of master (ie: new-oauth2-scopes)
