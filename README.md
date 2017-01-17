@@ -146,7 +146,7 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
   * Commit to that branch locally and regularly push your work to the same named branch on the server
   * When you need feedback or help, or you think the branch is ready for merging, open a pull request
   * After someone else has reviewed and signed off on the feature, you can merge it into master
-  * Once it is merged and pushed to ‘master’, you can and should deploy immediately
+  * Once it is merged and pushed to `master`, you can and should deploy immediately
 
   The above list is from the article [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html) by Scott Chacon
 
