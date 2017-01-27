@@ -139,11 +139,14 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
   
 # <a name="collaboration">Collaborative Coding</a>
 ### <a name="collaboration--git">Git Workflow</a>
+  
+  TODO: Locking down master
+
 
   Some basic rules to follow when developing on teams:
   
   * Anything in the master branch is deployable
-  * To work on something new, create a descriptively named branch off of master (ie: feature/new-oauth2-scopes)
+  * To work on something new, create a descriptively named branch off of master (ie: `feature/new-oauth2-scopes`)
   * Commit to that branch locally and regularly push your work to the same named branch on the server
   * When you need feedback or help, or you think the branch is ready for merging, open a pull request
   * After someone else has reviewed and signed off on the feature, you can merge it into master
