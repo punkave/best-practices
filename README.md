@@ -47,6 +47,7 @@ _Instead of having our content buried in folders, I'm proposing we pull the majo
 
 #### [Collaborative Coding](#collaboration)
 * [Git Workflow](#collaboration--git)
+* [Branch Naming](#collaboration--git-naming)
 
 #### Special topics
 _Here, we would link into specific articles with more in-depth information_
@@ -142,11 +143,12 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
   Some basic rules to follow when developing on teams:
   
   * Anything in the master branch is deployable
-  * To work on something new, create a descriptively named branch off of master (ie: new-oauth2-scopes)
+  * To work on something new, create a descriptively named branch off of master (ie: feature/new-oauth2-scopes)
   * Commit to that branch locally and regularly push your work to the same named branch on the server
   * When you need feedback or help, or you think the branch is ready for merging, open a pull request
   * After someone else has reviewed and signed off on the feature, you can merge it into master
   * Once it is merged and pushed to `master`, you can and should deploy immediately
+
 
   The above list is from the article [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html) by Scott Chacon
 
@@ -165,10 +167,33 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
   git checkout master
   git pull origin master
   git checkout feature/my-feature-branch
+  ```
+  If this is a new branch and it hasn't been previously pushed you may ...
+  ```
   git rebase -i master
-  git push origin feature/my-feature-branch -f # force needed if remote already exists since you are re-writing history
+  ```
+  This will allow you to squash and clean up your commits before code review for easier diffs/discussion ... otherwise ...
+  ```
+  git merge origin master
+  ```
+  Then ...
+  ```
+  git push origin feature/my-feature-branch
   ```
   Then create a PR in github.
 
   Once you are done with the code review, time to merge onto master!
+  
+### <a name="collaboration--git-naming">Branch Naming</a>
+
+  `prefix/descriptive-branch-name`
+
+  #### Prefixing
+  
+  `hotfix` - quick fix which will be merged directly into master, bypassing the review process
+  
+  `feature` - branch for building out a new feature, goes through normal review process before being merged into master
+  
+  `fix` - fix to be optionally merged into `staging` branch for deployment to staging for testing before being merged into `master` for deployment
+  
 
