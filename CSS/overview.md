@@ -69,7 +69,7 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 ```
 
 <a name="variables"></a><a name="2.2"></a>
-[2.2](#variables) Use abstractions to name variables
+[2.2](#variables) Use abstractions to name variables.
 
 > Why? This makes the UI flexible to visual change.
 
