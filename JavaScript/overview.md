@@ -4,6 +4,9 @@ JavaScript at P'unk Avenue follows a consistent style. What follows is a summary
 
 Let's start with the basics.
 
+## ESLint
+Use P'unk Ave's [ESlint configuration](https://www.npmjs.com/package/eslint-config-punkave) (based on JavaScript Standard Style) to lint all JavaScript with your editor or during a build process. Install [Atom's ESLint plugin](https://github.com/AtomLinter/linter-eslint).
+
 ## Always declare variables at the start of the function
 
 Declaring a variable with `var` inside a "while" or "for" loop DOES NOT make a unique variable for every pass through the loop. And that will mess you up good when you start trying to access them in [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
