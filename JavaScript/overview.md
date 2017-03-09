@@ -4,62 +4,6 @@ JavaScript at P'unk Avenue follows a consistent style. What follows is a summary
 
 Let's start with the basics.
 
-## Indentation
-
-Two spaces. Always. Not tabs. Set up your editor accordingly and it'll automatically do this for you.
-
-## Quoted strings
-
-Use single quotes. They are easier to type, and a consistent convention simplifies searches for quoted strings as well as documentation generation.
-
-## Always use semicolons
-
-WRONG:
-
-```javascript
-var x
-doSomething()
-doSomethingElse()
-self.method = function() {
-  // code here
-}
-```
-
-RIGHT
-
-```javascript
-var x;
-doSomething();
-doSomethingElse();
-self.method = function() {
-  // code here
-};
-```
-
-JavaScript's rules for when you can skip `;` are baroque. It's better to be consistent with the style familiar to programmers in all of the languages that share a C-like syntax (JavaScript, Java, PHP, C, C++, Objective C, etc).
-
-Notice that a semicolon is correct after an assignment statement, even if we're assigning a function as the value.
-
-## Always use curly braces
-
-WRONG:
-
-```javascript
-if (test()) doTheThing();
-```
-
-On one line, it's harder to read unless it's trivial. And if you break it over multiple lines, it is easier to wind up with bugs when you accidentally try to introduce a second statement. Apple got stuck with a famous security bug this way. Just don't use it.
-
-RIGHT:
-
-```javascript
-if (test()) {
-  doTheThing();
-}
-```
-
-The opening curly brace appears on the *same line* with `if`, `while`, etc. The closing curly brace appears on a line of its own.
-
 ## Always declare variables at the start of the function
 
 Declaring a variable with `var` inside a "while" or "for" loop DOES NOT make a unique variable for every pass through the loop. And that will mess you up good when you start trying to access them in [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
@@ -745,4 +689,3 @@ self.beforeShow = function(callback) {
 ```
 
 #### TODO: write performant scroll handlers
-
