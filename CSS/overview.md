@@ -22,3 +22,28 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 
 <a name="oocss"></a><a name="1.2"></a>
 - [1.1](#itcss) OOCSS
+Author CSS with the [two main principles](https://github.com/stubbornella/oocss/wiki#two-main-principles-of-oocss) of object-oriented css in mind. Rarely use location dependent styles. This ensures that selectors can be reused anywhere and are context agnostic.
+
+### Bad
+```less
+// Using cascade
+.context {
+  .aside {
+    padding-bottom: 3rem;
+
+    .title {
+      padding-bottom: 4rem;
+    }
+  }
+}
+```
+
+### Good
+```less
+// OOCSS
+.context { ... }
+.aside { ... }
+.aside--context { padding-bottom: 3rem; }
+.title { ... }
+.title--context { padding-bottom: 4rem; }
+```
