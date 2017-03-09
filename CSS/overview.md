@@ -21,13 +21,21 @@ ITCSS organizes CSS into eight "groups" that can even be used to organize your L
 
 It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using these group names so that it's easy to identify the role of a selector in markup.
 
-<a name="oocss"></a><a name="1.2"></a>
-[1.2](#oocss) **OOCSS**
-Author CSS with the [two main principles](https://github.com/stubbornella/oocss/wiki#two-main-principles-of-oocss) of object-oriented css in mind. Rarely use location dependent styles. This ensures that selectors can be reused anywhere and are context agnostic.
+<a name="location-dependency"></a><a name="1.2"></a>
+[1.2](#location-dependency) Rarely use location dependent styles.
 
-### Bad
+> Why? This ensures that selectors can be reused anywhere and are context agnostic.
+
 ```less
+// Good
+.context { border: 1rem solid #ccc; }
+.aside { ... }
+.aside--context { padding-bottom: 3rem; }
+.title { ... }
+.title--context { padding-bottom: 4rem; }
+// Bad
 .context {
+  border: 1rem solid #ccc;
   .aside {
     padding-bottom: 3rem;
     .title {
@@ -35,15 +43,6 @@ Author CSS with the [two main principles](https://github.com/stubbornella/oocss/
     }
   }
 }
-```
-
-### Good
-```less
-.context { ... }
-.aside { ... }
-.aside--context { padding-bottom: 3rem; }
-.title { ... }
-.title--context { padding-bottom: 4rem; }
 ```
 
 **[⬆ back to top](#table-of-contents)**
