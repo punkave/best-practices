@@ -26,11 +26,9 @@ Author CSS with the [two main principles](https://github.com/stubbornella/oocss/
 
 ### Bad
 ```less
-// Using cascade
 .context {
   .aside {
     padding-bottom: 3rem;
-
     .title {
       padding-bottom: 4rem;
     }
@@ -40,7 +38,6 @@ Author CSS with the [two main principles](https://github.com/stubbornella/oocss/
 
 ### Good
 ```less
-// OOCSS
 .context { ... }
 .aside { ... }
 .aside--context { padding-bottom: 3rem; }
