@@ -5,7 +5,7 @@ JavaScript at P'unk Avenue follows a consistent style. What follows is a summary
 Let's start with the basics.
 
 ## ESLint
-Use P'unk Ave's [ESlint configuration](https://www.npmjs.com/package/eslint-config-punkave) (based on JavaScript Standard Style) to lint all JavaScript with your editor or during a build process. Install [Atom's ESLint plugin](https://github.com/AtomLinter/linter-eslint).
+Use P'unk Ave's [ESLint configuration](https://www.npmjs.com/package/eslint-config-punkave) (based on JavaScript Standard Style) to lint all JavaScript with your editor or during a build process. Install [Atom's ESLint plugin](https://github.com/AtomLinter/linter-eslint).
 
 ## Always declare variables at the start of the function
 
