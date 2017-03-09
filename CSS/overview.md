@@ -49,8 +49,8 @@ Author CSS with the [two main principles](https://github.com/stubbornella/oocss/
 **[⬆ back to top](#table-of-contents)**
 
 ## Naming
-<a name="selectors"></a><a name="1.1"></a>
-[1.1](#selectors) Name selectors by role in UI instead of semantically.
+<a name="selectors"></a><a name="2.1"></a>
+[2.1](#selectors) Name selectors by role in UI instead of semantically.
 
 > Why? This decouples rigid, visual semantics from the UI
 
@@ -67,6 +67,18 @@ Author CSS with the [two main principles](https://github.com/stubbornella/oocss/
   font-size: 2rem;
   color: black;
 }
+```
+
+<a name="variables"></a><a name="2.2"></a>
+[2.2](#variables) Use abstractions to name variables
+
+> Why? This makes the UI flexible to visual change.
+
+```less
+// Good
+@border-primary: 1rem solid green;
+// Bad
+@green-border: 1rem solid green;
 ```
 
 **[⬆  back to top](#table-of-contents)**
