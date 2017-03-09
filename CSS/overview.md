@@ -27,19 +27,17 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 
 ```less
 // Good
-.context { border: 1rem solid #ccc; }
-.aside { ... }
-.aside--context { padding-bottom: 3rem; }
-.title { ... }
-.title--context { padding-bottom: 4rem; }
+.context {
+  border: 1rem solid #ccc;
+}
+.aside--context {
+  padding-bottom: 3rem;
+}
 // Bad
 .context {
   border: 1rem solid #ccc;
   .aside {
     padding-bottom: 3rem;
-    .title {
-      padding-bottom: 4rem;
-    }
   }
 }
 ```
