@@ -2,6 +2,7 @@
 
 ## Table of Contents
 1. [Architecture](#architecture)
+2. [Naming](#naming)
 
 ## Architecture
 <a name="itcss"></a><a name="1.1"></a>
@@ -21,7 +22,7 @@ ITCSS organizes CSS into eight "groups" that can even be used to organize your L
 It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using these group names so that it's easy to identify the role of a selector in markup.
 
 <a name="oocss"></a><a name="1.2"></a>
-[1.2](#itcss) **OOCSS**
+[1.2](#oocss) **OOCSS**
 Author CSS with the [two main principles](https://github.com/stubbornella/oocss/wiki#two-main-principles-of-oocss) of object-oriented css in mind. Rarely use location dependent styles. This ensures that selectors can be reused anywhere and are context agnostic.
 
 ### Bad
@@ -46,3 +47,26 @@ Author CSS with the [two main principles](https://github.com/stubbornella/oocss/
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+## Naming
+<a name="selectors"></a><a name="1.1"></a>
+[1.1](#selectors) Name selectors by role in UI instead of semantically.
+
+> Why? This decouples rigid, visual semantics from the UI
+
+```less
+// Good
+.title-primary {
+  font-family: 'Helvetica';
+  font-size: 2rem;
+  color: black;
+}
+// Bad
+.title-black {
+  font-family: 'Helvetica';
+  font-size: 2rem;
+  color: black;
+}
+```
+
+**[⬆  back to top](#table-of-contents)**
