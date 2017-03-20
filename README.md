@@ -23,7 +23,6 @@ Also see the [Pragmatic Programmer Quick Reference Guide](http://www.ccs.neu.edu
 _Instead of having our content buried in folders, I'm proposing we pull the majority of it out onto this main README page. Below, I have built out a table of contents suggesting the topics we should cover with a few breif sentences and some code examples. Under some topics/sections, I started to bullet out points we might want to cover._
 
 #### [House Style Rules](#house)
-* [CSS Architecture](#house--css)
 * [Javascript](#house--javascript)
 * [Markup](#house--markup)
 * [Sizes](#house--sizes)
@@ -57,25 +56,6 @@ _Here, we would link into specific articles with more in-depth information_
 * [Importing spreadsheet data into apostrophe-pieces based content types](#)
 * [Workflow for frontend-only / static site builds](#)
 * [What to do when your client needs a placeholder site before their full-featured a2 build](#)
-
-
-# <a name="house">House Style Rules
-
-## <a name="house--css">CSS Architecture</a>
-
-Use Harry Robert's ITCSS Architecture to author CSS. ITCSS provides a way to manage common issues that crop up caused by source order, cascade and specificity in large scale projects.
-
-ITCSS organizes CSS into eight "groups" that can even used to organize your LESS folders if you wish. The main goal is that the compiled CSS file is structured (top to bottom) in order of specificity.
-
-- **Settings** - Variables
-- **Tools** - Mixins
-- **Generic** - Ground zero styles (normalize.css, resets)
-- **Base** - Unclassed HTML elements
-- **Objects** - UI Abstractions (object-oriented css)
-- **Components** - One off designed components (footer, header, etc.)
-- **Utilities** - Single purpose (immutable) selectors
-
-It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using these group names so that it's easy to identify the role of a selector in markup.
 
 ## <a name="house--javascript">Javascript</a>
   * nest things in apos events where applicable
@@ -199,4 +179,3 @@ It's also helpful pattern is to prefix selectors (i.e. `.o-, .c-, .u-`) using th
   
   `fix` - fix to be optionally merged into `staging` branch for deployment to staging for testing before being merged into `master` for deployment
   
-
