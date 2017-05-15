@@ -50,7 +50,7 @@ git reset --hard xxxxxyourcommitidherexxxxxx
 git push origin unstable -f
 ```
 
-**Use the above commands with care. Make  It is possible to lose work permanently if you use `git reset --hard` incorrectly. Make absolutely sure your wew work has already been pushed to your separate `sliding-modals` branch at this point, and that you have everyone else's contributions via `git pull`.**
+**Use the above commands with care. Make  It is possible to lose work permanently if you use `git reset --hard` incorrectly. Make absolutely sure your new work has already been pushed to your separate `sliding-modals` branch at this point, and that you have everyone else's contributions via `git pull`.**
 
 ## Merging a branch
 
