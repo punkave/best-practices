@@ -48,6 +48,9 @@ _Instead of having our content buried in folders, I'm proposing we pull the majo
 * [Git Workflow](#collaboration--git)
 * [Branch Naming](#collaboration--git-naming)
 
+#### [Travis CI](#travis)
+* [Getting Started](#travis--getting-started)
+
 #### Special topics
 _Here, we would link into specific articles with more in-depth information_
 
@@ -116,15 +119,15 @@ _Here, we would link into specific articles with more in-depth information_
 ### <a name="responsive--accessibility">Accessibility</a>
   * The bare minimums
   * Docs for WCAG etc.
-  
+
 # <a name="collaboration">Collaborative Coding</a>
 ### <a name="collaboration--git">Git Workflow</a>
-  
+
   TODO: Locking down master
 
 
   Some basic rules to follow when developing on teams:
-  
+
   * Anything in the master branch is deployable
   * To work on something new, create a descriptively named branch off of master (ie: `feature/new-oauth2-scopes`)
   * Commit to that branch locally and regularly push your work to the same named branch on the server
@@ -166,16 +169,36 @@ _Here, we would link into specific articles with more in-depth information_
   Then create a PR in github.
 
   Once you are done with the code review, time to merge onto master!
-  
+
 ### <a name="collaboration--git-naming">Branch Naming</a>
 
   `prefix/descriptive-branch-name`
 
   #### Prefixing
-  
+
   `hotfix` - quick fix which will be merged directly into master, bypassing the review process
-  
+
   `feature` - branch for building out a new feature, goes through normal review process before being merged into master
-  
+
   `fix` - fix to be optionally merged into `staging` branch for deployment to staging for testing before being merged into `master` for deployment
-  
+
+# <a name="travis">Travis CI</a>
+
+### <a name="travis--getting-started">Getting Started</a>
+
+  1) Log in to [Travis CI](https://travis-ci.com/) - If you have a github account linked to P'unk Ave, you'll have the same permissions to access repos in the Travis UI
+  2) Enable Travis for the repo you want to set up. This will automatically "do the things" to the repo (add an SSH key and enable builds).
+  3) Add a `.travis.yml` file to your project. Basic config might look something like this:
+  ```
+  language: node_js
+  node_js: '4.6.0'
+  cache:
+    directories:
+      - node_modules
+  before_script:
+    - npm install
+  script:
+    - gulp build
+  ```
+  All sorts of options here: [https://docs.travis-ci.com/](https://docs.travis-ci.com/)
+  4) Build away.
