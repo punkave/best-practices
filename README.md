@@ -187,7 +187,9 @@ _Here, we would link into specific articles with more in-depth information_
 ### <a name="travis--getting-started">Getting Started</a>
 
   1) Log in to [Travis CI](https://travis-ci.com/) - If you have a github account linked to P'unk Ave, you'll have the same permissions to access repos in the Travis UI
+
   2) Enable Travis for the repo you want to set up. This will automatically "do the things" to the repo (add an SSH key and enable builds).
+
   3) Add a `.travis.yml` file to your project. Basic config might look something like this:
   ```
   language: node_js
@@ -201,4 +203,5 @@ _Here, we would link into specific articles with more in-depth information_
     - gulp build
   ```
   All sorts of options here: [https://docs.travis-ci.com/](https://docs.travis-ci.com/)
+  
   4) Build away.
