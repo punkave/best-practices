@@ -19,8 +19,6 @@ Declaring variables in nested functions is perfectly OK.
 
 Otherwise they are global, resulting in strange bugs and side effects.
 
-Ideally you should use [JSHint](http://jshint.com/) so that your editor tells you anytime you forget to use `var`.
-
 ## No littering
 
 In browser-side JavaScript, do not litter the namespace with your own variables at "top level." This is likely to interfere with other code that is trying to do the same thing.
