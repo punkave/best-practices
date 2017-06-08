@@ -1,6 +1,6 @@
 # CSS
 
-Use [stylelint][https://stylelint.io/] and the P'unk Ave [stylelint configuration]https://www.npmjs.com/package/stylelint-config-punkave to lint CSS. There's an [Atom plugin](https://atom.io/packages/linter-stylelint) available for stylelint.
+Use [stylelint](https://stylelint.io/) and the P'unk Ave [stylelint configuration](https://www.npmjs.com/package/stylelint-config-punkave) to lint CSS. There's an [Atom plugin](https://atom.io/packages/linter-stylelint) available for stylelint.
 
 ## Table of Contents
 1. [Architecture](#architecture)
