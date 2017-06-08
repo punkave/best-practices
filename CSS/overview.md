@@ -88,7 +88,7 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 - Use `px` for borders
 - Use unitless line height
 - Use `em` for media queries
-- Use `rem` for everything (font size, spacing, etc.)
-- `%` are also appropriate and and can be used for column widths, etc.
+- Use `rem` for everything else (font size, spacing, etc.)
+- `%` is also appropriate and and can be used for column widths, etc.
 
 **[⬆  back to top](#table-of-contents)**
