@@ -3,6 +3,7 @@
 ## Table of Contents
 1. [Architecture](#architecture)
 2. [Naming](#naming)
+3. [Sizing](#sizing)
 
 ## Architecture
 <a name="itcss"></a><a name="1.1"></a>
@@ -76,5 +77,18 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 // Bad
 @green-border: 1rem solid green;
 ```
+
+**[⬆  back to top](#table-of-contents)**
+
+## Sizing
+
+<a name="sizing"></a><a name="3.1"></a>
+[3.1](#sizing) Sizing
+
+- Use `px` for borders
+- Use unitless line height
+- Use `em` for media queries
+- Use `rem` for everything else (font size, spacing, etc.)
+- `%` is also appropriate and can be used for column widths, etc.
 
 **[⬆  back to top](#table-of-contents)**
