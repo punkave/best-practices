@@ -1,5 +1,7 @@
 # CSS
 
+Use [stylelint](https://stylelint.io/) and the P'unk Ave [stylelint configuration](https://www.npmjs.com/package/stylelint-config-punkave) to lint CSS. There's an [Atom plugin](https://atom.io/packages/linter-stylelint) available for stylelint. If you don't have stylelint validating with a build tool or test you need to rely on your editor for linting.
+
 ## Table of Contents
 1. [Architecture](#architecture)
 2. [Naming](#naming)
