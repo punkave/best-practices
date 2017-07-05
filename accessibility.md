@@ -7,9 +7,9 @@
   2. [Document Outline](#document-outline)
   3. [Wayfinding](#wayfinding)
   4. [Images](#images)
-  5. [ARIA](#aria) 
+  5. [ARIA](#aria)
   6. [Links](#links)
-  7. [JavsScript](#javascript) 
+  7. [JavsScript](#javascript)
 
 ## Language Attribute
 
@@ -36,7 +36,7 @@
 
   <a name="images--html"></a><a name="4.1"></a>
   - [4.1](#images--html) Use `<img></img>` for images that are content. Use CSS background images for design "chrome".
-  
+
   <a name="images--alternatives"></a><a name="4.2"></a>
   - [4.2](#images--alternatives) Use alternative text for any image used as content. Alternative text should provide a description of the image.
 
@@ -49,30 +49,30 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-## Links 
- 
+## Links
+
   <a name="links--focus-state"></a><a name="6.1"></a>
   - [6.1](#links--focus-state) Links should have a focus state `:focus`
-  
+
   <a name="links--in-body"></a><a name="6.2"></a>
   - [6.2](#links--in-body) Links in "body" text should be underlined
-  
+
   <a name="links--purpose"></a><a name="6.3"></a>
   - [6.3](#links--purpose) Link purpose should be clear from the link text alone
 
 **[⬆ back to top](#table-of-contents)**
 
 ## JavaScript
- 
+
   <a name="javascript--unobtrusive"></a><a name="7.1"></a>
   - [7.1](#javascript--unobtrusive) Use unobtrusive JavaScript
-  
+
   <a name="javascript--alternative"></a><a name="7.2"></a>
   - [7.2](#javascript--alternative) Provide `no-js` alternatives for users that don't have JavaScript enabled
-  
+
   <a name="javascript--events"></a><a name="7.3"></a>
   - [7.3](#javascript--events) Use device agnostic events such as `onclick` and `onfocus`
-  
+
   <a name="javascript--keyboard-events"></a><a name="7.4"></a>
   - [7.4](#javascript--keyboard-events) Provide keyboard alternative events
 
