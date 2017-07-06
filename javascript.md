@@ -28,7 +28,7 @@ $foo.hide();
 // Good
 $('[data-foo]').removeClass('is-active');
 // Bad
-$('foo').removeClass('is-active');
+$('.foo').removeClass('is-active');
 ```
 
 <a name="event-delegation"></a><a name="1.3"></a>
