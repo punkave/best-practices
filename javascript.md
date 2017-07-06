@@ -1,11 +1,56 @@
-# Javascript
+# JavaScript
 
-JavaScript at P'unk Avenue follows a consistent style. What follows is a summary of that style. These are practices that are always followed in our npm modules and should ideally be followed in project-level and other non-Apostrophe code as well.
-
-Let's start with the basics.
-
-## ESLint
 Use P'unk Ave's [ESLint configuration](https://www.npmjs.com/package/eslint-config-punkave) (based on JavaScript Standard Style) to lint all JavaScript with your editor or during a build process. Install [Atom's ESLint plugin](https://github.com/AtomLinter/linter-eslint).
+
+## Table of Contents
+
+1. [Front-end](#front-end)
+
+## Front-end
+<a name="visual-state"></a><a name="1.1"></a>
+[1.1](#visual-state) Add and remove classes to manage visual state
+
+> Why? Provides a separation of concerns.
+
+```javascript
+// Good
+$foo.removeClass('is-active');
+// Bad
+$foo.hide();
+```
+
+<a name="data-attributes"></a><a name="1.2"></a>
+[1.2](#data-attributes) Use data attributes as event handlers
+
+> Why? Provides a separation of concerns.
+
+```javascript
+// Good
+$('[data-foo]').removeClass('is-active');
+// Bad
+$('.foo').removeClass('is-active');
+```
+
+<a name="event-delegation"></a><a name="1.3"></a>
+[1.3](#event-delegation) Use event delegation. Don't bind events to `body` unless you don't have a consistent outer node to bind to. Bind to an outer container for the in question component if possible. Always use a named function to bind to `body` or the component so it's easier to debug using dev tools.
+
+> Why? Event delegation allows you to attach an event to a parent node and account for matching descendants if they exist now or in the future.
+
+```javascript
+// Outer component
+const $component = $('[data-foo]').find('data-bar');
+
+function fooBar () {
+  console.log('foo');
+};
+
+$component.on('click', fooBar);
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+# NEEDS REVIEW!
 
 ## Always declare variables at the start of the function
 
