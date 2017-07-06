@@ -7,7 +7,7 @@ Use P'unk Ave's [ESLint configuration](https://www.npmjs.com/package/eslint-conf
 1. [Front-end](#front-end)
 
 ## Front-end
-<a name="vistual-state"></a><a name="1.1"></a>
+<a name="visual-state"></a><a name="1.1"></a>
 [1.1](#visual-state) Add and remove classes to manage visual state
 
 > Why? Provides a separation of concerns.
@@ -37,7 +37,7 @@ $('foo').removeClass('is-active');
 > Why? Event delegation allows you to attach an event to a parent node and account for matching descendants if they exist now or in the future.
 
 ```javascript
-//
+// Outer component
 const $component = $('[data-foo]').find('data-bar');
 
 function fooBar () {
