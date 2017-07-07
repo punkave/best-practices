@@ -95,9 +95,9 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 - `%` is also appropriate and can be used for column widths, etc.
 
 <a name="sizing"></a><a name="3.2"></a>
-[3.1](#typography) Typography
+[3.2](#typography) Typography
 
-> Why? A relative root font size is important so that type scales appropriately if a user has their type size settings adjusted in their browser.
+> Why? A relative, root font size is important so that type scales appropriately if a user has their type size settings adjusted in their browser.
 
 Set a root `font-size` of `62.5%` on the `html` selector, which is roughly equivalent to `16px` (an authoring convenience, `1.6rem` is equal to `16px`) across browsers.
 
