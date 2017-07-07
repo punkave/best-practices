@@ -86,13 +86,18 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 ## Sizing
 
 <a name="sizing"></a><a name="3.1"></a>
-[3.1](#sizing) Sizing
+[3.1](#sizing) Sizing units
 
 - Use `px` for borders
 - Use unitless line height
 - Use `em` for media queries
 - Use `rem` for everything else (font size, spacing, etc.)
 - `%` is also appropriate and can be used for column widths, etc.
+
+<a name="sizing"></a><a name="3.2"></a>
+[3.1](#typography) Typography
+
+
 
 **[⬆  back to top](#table-of-contents)**
 
