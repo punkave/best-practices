@@ -6,6 +6,7 @@ Use [stylelint](https://stylelint.io/) and the P'unk Ave [stylelint configuratio
 1. [Architecture](#architecture)
 2. [Naming](#naming)
 3. [Sizing](#sizing)
+4. [Stacking Order](#stacking-order)
 
 ## Architecture
 <a name="itcss"></a><a name="1.1"></a>
@@ -92,5 +93,12 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 - Use `em` for media queries
 - Use `rem` for everything else (font size, spacing, etc.)
 - `%` is also appropriate and can be used for column widths, etc.
+
+**[⬆  back to top](#table-of-contents)**
+
+## Stacking Order
+
+<a name="zindex"></a><a name="4.1"></a>
+[3.1](#zindex) Use variables or maps to manage z-index values. Variables or keys should be named semantically, such as "z-index-modal". Values should ideally be set `1, 2, 3, 4` etc. and shouldn't be set arbitrarily. Declarations like `z-index: 9999;` should never be used and always avoid `!important`. Store all variables or maps in a partial or single place.
 
 **[⬆  back to top](#table-of-contents)**
