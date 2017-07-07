@@ -99,6 +99,6 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 ## Stacking Order
 
 <a name="zindex"></a><a name="4.1"></a>
-[3.1](#zindex) Use variables or maps to manage z-index values. Variables or keys should be named semantically, such as "z-index-modal". Values should ideally be set `1, 2, 3, 4` etc. and shouldn't be set arbitrarily. Store all z-index variables or maps in a partial or single place.
+[3.1](#zindex) Use variables or maps to manage z-index values. Variables or keys should be named semantically, such as "z-index-modal". Values should ideally be set `1, 2, 3, 4` etc. and shouldn't be set arbitrarily. Declarations like `z-index: 9999;` should never be used and always avoid `!important`. Store all variables or maps in a partial or single place.
 
 **[⬆  back to top](#table-of-contents)**
