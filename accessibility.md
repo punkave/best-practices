@@ -18,10 +18,13 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-## Document Outline
+## Semantic HTML
 
-  <a name="documentOutline--definition"></a><a name="2.1"></a>
-  - [2.1](#documentOutline--definition) Use semantic headings and structure
+  <a name="semanticHtml--definition"></a><a name="2.1"></a>
+  - [2.1](#semanticHtml--definition) Use semantic headings and structure to [establish a document outline](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines). Current consensus recommends using H1-6 heading rank rather than repeated H1 tags in nested sectioning elements.
+  <a name="semanticHtml--buttons"></a><a name="2.1"></a>
+  - [2.2](#semanticHtml--buttons) Use the `button` element for clickable JS interaction points and similar non-linking components. If not of the `submit`, `reset`, or `menu` types, use `type="button"` to designate a generic button.
+    - The `a` tag should only be used when using the `href` attribute to link "to other web pages, files, locations within the same page, email addresses, or any other URL" ([ref](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)).
 
 **[⬆ back to top](#table-of-contents)**
 
