@@ -47,22 +47,25 @@ function fooBar () {
 $component.on('click', fooBar);
 ```
 
+<a name="variables"></a><a name="1.4"></a>
+[1.4](#variables) Always declare and cache variables. If the variable contains a jQuery object prefix the variable name with `$`. Always put your variable statements *at the start of a function*.
+
+> Why? Performance and maintainability.
+
+```javascript
+// Good
+const $body = $('body');
+
+$body.on('click', fooBar);
+
+// Bad
+$('body').on('click', fooBar);
+```
+
 **[⬆ back to top](#table-of-contents)**
 
 
 # NEEDS REVIEW!
-
-## Always declare variables at the start of the function
-
-Declaring a variable with `var` inside a "while" or "for" loop DOES NOT make a unique variable for every pass through the loop. And that will mess you up good when you start trying to access them in [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
-
-To avoid confusion, always put your `var` statements *at the start of a function*.
-
-Declaring variables in nested functions is perfectly OK.
-
-## Always declare variables!
-
-Otherwise they are global, resulting in strange bugs and side effects.
 
 ## No littering
 
@@ -686,52 +689,3 @@ self.$el.find('.my-thing').on('click', function() {
   
 });
 ```
-
-#### Cache things
-
-WRONG:
-
-```javascript
-self.beforeShow = function(callback) {
-  self.$el.find('[data-open]').on('click', function() {
-    self.$el.find('[data-list]').show();
-    self.$el.find('[data-open]').hide();
-    self.$el.find('[data-show]').show();
-  });
-  self.$el.find('[data-close]').on('click', function() {
-    self.$el.find('[data-hide]').show();
-    self.$el.find('[data-close]').hide();
-    self.$el.find('[data-open]').show();
-  });
-  return setImmediate(callback);
-};
-```
-
-All this repetition is unmaintainable and bug-prone.
-
-RIGHT:
-
-```javascript
-self.beforeShow = function(callback) {
-
-  self.$open = self.$el.find('[data-open]');
-  self.$list = self.$el.find('[data-list]');
-  self.$close = self.$el.find('[data-close]');
-
-  self.$open.on('click', function() {
-    $list.show();
-    $open.hide();
-    $close.show();
-  });
-
-  self.$close.on('click', function() {
-    $list.hide();
-    $open.show();
-    $close.hide();
-  });
-
-  return setImmediate(callback);
-};
-```
-
-#### TODO: write performant scroll handlers
