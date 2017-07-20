@@ -55,11 +55,12 @@ $component.on('click', fooBar);
 ```javascript
 // Good
 const $body = $('body');
+const $component = $body.find('[data-foo]');
 
-$body.on('click', fooBar);
+$component.on('click', fooBar);
 
 // Bad
-$('body').on('click', fooBar);
+$('body').find('[data-foo]').on('click', fooBar);
 ```
 
 **[⬆ back to top](#table-of-contents)**
