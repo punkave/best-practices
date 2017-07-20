@@ -48,7 +48,7 @@ $component.on('click', fooBar);
 ```
 
 <a name="variables"></a><a name="1.4"></a>
-[1.4](#variables) Always declare and cache variables. If the variable contains a jQuery object prefix the variable name with `$`. Always put your variable statements *at the start of a function*.
+[1.4](#variables) Always declare and cache variables. If the variable contains a jQuery object prefix the variable name with `$`. Always put your variable statements *at the start of a function*. Declaring a variable with `let` or `var` inside a "while" or "for" loop does not make a unique variable for every pass through the loop. And that will mess you up good when you start trying to access them in [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
 
 > Why? Performance and maintainability.
 
