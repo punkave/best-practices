@@ -516,9 +516,10 @@ module.exports = {
     require('./api.js')(self, options);
   }
 }
-
-// in lib/modules/cars/api.js
 ```
+
+```javascript
+// in lib/modules/cars/api.js
 module.exports = function(self, options) {
   self.honk = function() { ... };
 };
