@@ -9,7 +9,8 @@
   4. [Images](#images)
   5. [ARIA](#aria)
   6. [Links](#links)
-  7. [JavsScript](#javascript)
+  7. [JavaScript](#javascript)
+  8. [Testing](#testing)
 
 ## Language Attribute
 
@@ -79,4 +80,11 @@
   <a name="javascript--keyboard-events"></a><a name="7.4"></a>
   - [7.4](#javascript--keyboard-events) Provide keyboard alternative events
 
-  **[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**
+
+## Testing
+
+  <a name="testing"></a><a name="8.1"></a>
+  - [8.1](#testing) Sites should be tested during development to ensure basic accessibility standards are being met (WCAG 2.0 AA or higher if required by the project). One simple way to do this is to install the [WAVE Toolbar browser extension](http://wave.webaim.org/extension/).
+
+**[⬆ back to top](#table-of-contents)**
