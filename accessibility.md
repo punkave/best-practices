@@ -42,7 +42,7 @@
   - [4.1](#images--html) Use `<img></img>` for images that are content. Use CSS background images for design "chrome".
 
   <a name="images--alternatives"></a><a name="4.2"></a>
-  - [4.2](#images--alternatives) Use alternative text for any image used as content. Alternative text should provide a description of the image. If the image is presentational than favor an empty `alt=""` attribute over `role=presentation`.
+  - [4.2](#images--alternatives) Use alternative text for any image used as content. Alternative text should provide a description of the image. If the image is presentational or decorative use an empty `alt=""` attribute instead of `role=presentation`.
 
 **[⬆ back to top](#table-of-contents)**
 
