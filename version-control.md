@@ -7,8 +7,7 @@ We use Git for version control and GitHub for hosting repositories.
 
 ## Workflow
 
-<a name="workflow"></a><a name="1.1"></a>
-[1.1](#workflow) Gitflow
+### Gitflow
 
 We use [gitflow workflow](http://nvie.com/posts/a-successful-git-branching-model/), a branching model designed around project releases. Each repository should have two historical branches, `master` and `develop`.
 
