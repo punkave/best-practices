@@ -19,4 +19,4 @@ When ready to make a release to production you should use a `release` branch off
 
 If you need to make a bug fix to a production application make a `hotfix` branch off of `master`. A pull request should be made directly into `master` and `master` should then me merged back into `develop` to stay up to date. The developer should follow this branching model when the project is in "post-launch support". If a significant feature is being addressed use `feature` branches off of develop; if bug fixes are being addressed use `hotfix` branches and merge directly into `master`.
 
-**[⬆back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**
