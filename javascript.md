@@ -7,8 +7,10 @@ Use P'unk Ave's [ESLint configuration](https://www.npmjs.com/package/eslint-conf
 1. [Front-end](#front-end)
 
 ## Front-end
-<a name="visual-state"></a><a name="1.1"></a>
-[1.1](#visual-state) Add and remove classes to manage visual state
+
+### Visual State
+
+Add and remove classes to manage visual state
 
 > Why? Provides a separation of concerns.
 
@@ -19,8 +21,9 @@ $foo.removeClass('is-active');
 $foo.hide();
 ```
 
-<a name="data-attributes"></a><a name="1.2"></a>
-[1.2](#data-attributes) Use data attributes as event handlers
+### Data Attributes
+
+Use data attributes as event handlers
 
 > Why? Provides a separation of concerns.
 
@@ -31,8 +34,9 @@ $('[data-foo]').removeClass('is-active');
 $('.foo').removeClass('is-active');
 ```
 
-<a name="event-delegation"></a><a name="1.3"></a>
-[1.3](#event-delegation) Use event delegation. Don't bind events to `body` unless you don't have a consistent outer node to bind to. Bind to an outer container for the in question component if possible. Always use a named function to bind to `body` or the component so it's easier to debug using dev tools.
+### Event Delegation
+
+Use event delegation. Don't bind events to `body` unless you don't have a consistent outer node to bind to. Bind to an outer container for the in question component if possible. Always use a named function to bind to `body` or the component so it's easier to debug using dev tools.
 
 > Why? Event delegation allows you to attach an event to a parent node and account for matching descendants if they exist now or in the future.
 
@@ -47,8 +51,9 @@ function fooBar () {
 $component.on('click', fooBar);
 ```
 
-<a name="variables"></a><a name="1.4"></a>
-[1.4](#variables) Always declare and cache variables. If the variable contains a jQuery object prefix the variable name with `$`. Always put your variable statements *at the start of a function*. Declaring a variable with `let` or `var` inside a "while" or "for" loop does not make a unique variable for every pass through the loop. And that will mess you up good when you start trying to access them in [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
+### Variables
+
+Always declare and cache variables. If the variable contains a jQuery object prefix the variable name with `$`. Always put your variable statements *at the start of a function*. Declaring a variable with `let` or `var` inside a "while" or "for" loop does not make a unique variable for every pass through the loop. And that will mess you up good when you start trying to access them in [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
 
 > Why? Performance and maintainability.
 
@@ -474,7 +479,7 @@ apos.define('apostrophe-admin-bar', {
       ...
     };
   }
-  
+
 });
 ```
 
@@ -544,7 +549,7 @@ module.exports = {
   },
   construct: function(self, options) {
     // Add some methods
-  } 
+  }
 };
 ```
 
@@ -560,7 +565,7 @@ module.exports = {
     self.afterInit = function(callback) {
       // Do stuff, then invoke callback
     };
-  } 
+  }
 };
 ```
 
@@ -608,7 +613,7 @@ WRONG:
 
 ```javascript
 $('.foo').on('click', function() {
-  
+
 });
 ```
 
@@ -618,7 +623,7 @@ RIGHT:
 
 ```javascript
 $('body').on('click', '.foo', function() {
-  
+
 });
 ```
 
@@ -635,7 +640,7 @@ apos.on('enhance', function($el) {
 });
 ```
 
-Sometimes event delegation isn't enough. For those situations, use the Apostrophe `enhance` event, which fires every time Apostrophe adds new content to the page. `$el` will be the container element that has just been repopulated. 
+Sometimes event delegation isn't enough. For those situations, use the Apostrophe `enhance` event, which fires every time Apostrophe adds new content to the page. `$el` will be the container element that has just been repopulated.
 
 ### Tools you can count on (so don't re-install them)
 
@@ -680,7 +685,7 @@ WRONG:
 
 ```javascript
 $('.my-thing').on('click', function() {
-  
+
 });
 ```
 
@@ -688,6 +693,6 @@ RIGHT:
 
 ```javascript
 self.$el.find('.my-thing').on('click', function() {
-  
+
 });
 ```

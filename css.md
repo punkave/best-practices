@@ -9,8 +9,9 @@ Use [stylelint](https://stylelint.io/) and the P'unk Ave [stylelint configuratio
 4. [Stacking Order](#stacking-order)
 
 ## Architecture
-<a name="itcss"></a><a name="1.1"></a>
-[1.1](#itcss) Use Harry Robert's [ITCSS Architecture](https://www.youtube.com/watch?v=1OKZOV-iLj4) to author CSS. ITCSS provides a way to manage common issues that crop up caused by source order, cascade and specificity in large scale projects.
+
+### ITCSS
+Use Harry Robert's [ITCSS Architecture](https://www.youtube.com/watch?v=1OKZOV-iLj4) to author CSS. ITCSS provides a way to manage common issues that crop up caused by source order, cascade and specificity in large scale projects.
 
 ITCSS organizes CSS into eight "groups" that can even be used to organize your LESS folders if you wish. The main goal is that the compiled CSS file is structured (top to bottom) in order of specificity.
 
@@ -24,8 +25,8 @@ ITCSS organizes CSS into eight "groups" that can even be used to organize your L
 
 It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using these group names so that it's easy to identify the role of a selector in markup.
 
-<a name="location-dependency"></a><a name="1.2"></a>
-[1.2](#location-dependency) Rarely use location dependent styles.
+### Location Dependency
+Only use location dependent styles rarely.
 
 > Why? This ensures that selectors can be reused anywhere and are context agnostic.
 
@@ -49,8 +50,9 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 **[⬆ back to top](#table-of-contents)**
 
 ## Naming
-<a name="selectors"></a><a name="2.1"></a>
-[2.1](#selectors) Name selectors by role in UI instead of semantically.
+
+### Selectors
+Name selectors by role in UI instead of semantically.
 
 > Why? This decouples rigid, visual semantics from the UI
 
@@ -69,8 +71,8 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 }
 ```
 
-<a name="variables"></a><a name="2.2"></a>
-[2.2](#variables) Use abstractions to name variables.
+### Variables
+Use abstractions to name variables.
 
 > Why? This makes the UI flexible to visual change.
 
@@ -85,8 +87,7 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 
 ## Sizing
 
-<a name="sizing"></a><a name="3.1"></a>
-[3.1](#sizing) Sizing units
+### Sizing Units
 
 - Use `px` for borders
 - Use unitless line height
@@ -94,8 +95,7 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 - Use `rem` for everything else (font size, spacing, etc.)
 - `%` is also appropriate and can be used for column widths, etc.
 
-<a name="typography"></a><a name="3.2"></a>
-[3.2](#typography) Typography
+### Typography
 
 > Why? A relative, root font size is important so that type scales appropriately if a user has their type size settings adjusted in their browser.
 
@@ -105,7 +105,7 @@ Set a root `font-size` of `62.5%` on the `html` selector, which is roughly equiv
 
 ## Stacking Order
 
-<a name="zindex"></a><a name="4.1"></a>
-[3.1](#zindex) Use variables or maps to manage z-index values. Variables or keys should be named semantically, such as "z-index-modal". Values should ideally be set `1, 2, 3, 4` etc. and shouldn't be set arbitrarily. Declarations like `z-index: 9999;` should never be used and always avoid `!important`. Store all variables or maps in a partial or single place.
+### Z-index
+Use variables or maps to manage z-index values. Variables or keys should be named semantically, such as "z-index-modal". Values should ideally be set `1, 2, 3, 4` etc. and shouldn't be set arbitrarily. Declarations like `z-index: 9999;` should never be used and always avoid `!important`. Store all variables or maps in a partial or single place.
 
 **[⬆  back to top](#table-of-contents)**
