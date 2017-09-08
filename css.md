@@ -16,7 +16,7 @@ Use Harry Robert's [ITCSS Architecture](https://www.youtube.com/watch?v=1OKZOV-i
 ITCSS organizes CSS into eight "groups" that can even be used to organize your LESS folders if you wish. The main goal is that the compiled CSS file is structured (top to bottom) in order of specificity.
 
 - **Settings** - Variables
-- **Tools** - Mixins
+- **Tools** - Mixins, Functions
 - **Generic** - Ground zero styles (normalize.css, resets)
 - **Base** - Unclassed HTML elements
 - **Objects** - UI Abstractions (object-oriented css)
