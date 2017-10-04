@@ -7,6 +7,7 @@ Use [stylelint](https://stylelint.io/) and the P'unk Ave [stylelint configuratio
 2. [Naming](#naming)
 3. [Sizing](#sizing)
 4. [Stacking Order](#stacking-order)
+4. [Preprocessor Practices](#preprocessor-practices)
 
 ## Architecture
 
@@ -107,5 +108,40 @@ Set a root `font-size` of `62.5%` on the `html` selector, which is roughly equiv
 
 ### Z-index
 Use variables or maps to manage z-index values. Variables or keys should be named semantically, such as "z-index-modal". Values should ideally be set `1, 2, 3, 4` etc. and shouldn't be set arbitrarily. Declarations like `z-index: 9999;` should never be used and always avoid `!important`. Store all variables or maps in a partial or single place.
+
+**[⬆  back to top](#table-of-contents)**
+
+## Preprocessor Practices
+
+### Sass extends
+
+Using the `@extend` directive in Sass is a good tool to keep code DRY, but it [can also lead to unintentional exponential bloat](http://thesassway.com/intermediate/understanding-placeholder-selectors). To prevent this, **the `@extend` directive should only be used with placeholder selectors** (e.g., `%class-name`).
+
+The short version of the reasoning is that the placeholder can be limited to precisely what should be duplicated. Extending an actual class can unintentionally duplicate any rules where that class is present, even if not desired. [More here](http://alexbea.com/2016/01/10/sass-extends.html) for the extended reasoning.
+
+For example:
+```css
+%btn-style {
+  // CSS declarations
+}
+
+.o-button {
+  @extend %btn-style;
+}
+
+.o-tab {
+  @extend %btn-style;
+}
+```
+
+Compiles to:
+```css
+.o-button,
+.o-tab {
+  // CSS declarations
+}
+
+// @NOTE: Placeholder class is not compiled.
+```
 
 **[⬆  back to top](#table-of-contents)**
