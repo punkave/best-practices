@@ -1,6 +1,4 @@
-# JavaScript
-
-Use P'unk Ave's [ESLint configuration](https://www.npmjs.com/package/eslint-config-punkave) (based on [JavaScript Standard Style](https://standardjs.com/rules.html)) to lint all JavaScript with your editor or during a build process. Install [Atom's ESLint plugin](https://github.com/AtomLinter/linter-eslint).
+# General Practices
 
 ## Table of Contents
 
