@@ -20,3 +20,14 @@ body {
   // Prefix property needed for iOS font sizing.
 }
 ```
+
+Occasionally, the linter will throw multiple violations that can't be suppressed with inline comments. You may be tempted to use a generic disable inline comment: `// stylelint-disable`. Instead, use a block comment for each rule:
+```scss
+/* stylelint-disable font-weight-notation */
+/* stylelint-disable color-named */
+  strong { font-weight: map-get($weights, black); }
+```
+Remember to re-enable the linter: 
+```
+/* stylelint-enable */
+```
