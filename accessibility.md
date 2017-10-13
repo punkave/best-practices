@@ -5,9 +5,9 @@
 ## Table of Contents
   1. [Language Attribute](#language-attribute)
   2. [Semantic HTML](#semantic-html)
-  3. [Wayfinding](#wayfinding)
-  4. [Images](#images)
-  5. [ARIA](#aria)
+  3. [ARIA](#aria)
+  4. [Wayfinding](#wayfinding)
+  5. [Images](#images)
   6. [Links](#links)
   7. [JavaScript](#javascript)
   8. [Testing](#testing)
@@ -29,6 +29,24 @@
   - Use the `button` element for JS interaction points and similar non-linking components. If a button is not of the `submit`, `reset`, or `menu` types, use `type="button"` to designate a generic button.
     - The `a` tag should only be used when using the `href` attribute to link "to other web pages, files, locations within the same page, email addresses, or any other URL" ([ref](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)).
 
+### HTML5 Elements
+
+HTML5 elements should be used whenever possible to communicate the element's role in the page. Some notable examples include:
+  - [`main`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main) for the primary content of the page, most appropriately excluding repeated elements (e.g., sidebars, decorative marquees, site header and footer)
+  - [`article`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article) for self-contained content that could conceivably belong in an RSS feed, such as blog posts, press releases, and event information (in both page and individually in index listings)
+  - [`section`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) for thematically grouped content in a component that doesn't justify a stronger semantic element
+  - [`nav`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav) for all significant navigation link lists
+  - [`aside`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside) for complementary content, such as advertising, "related article" lists, and repeated page sidebars
+
+Semantic HTML5 elements provide additional meaning to an HTML document for other technologies. Notably, using these roles not only serves visitors using accessibility technologies, but it also makes parsing code easier for fellow developers.
+
+**[⬆ back to top](#table-of-contents)**
+
+## ARIA
+
+  - In most cases, using semantic HTML elements makes explicit designation of landmark roles unnecessary (e.g., using `role="complementary"` on an `aside` element). The exceptions would be when they are serving slightly atypical roles. An example of the latter would be setting [`role="search"`](https://w3c.github.io/aria/aria/aria.html#search) on an `aside` element when it houses a search field.
+  - For more complex interactive components, use ARIA attributes to help assistive technologies navigate website functionality. Accessibility advocate Heydon Pickering has gathered [useful examples of using ARIA roles](http://heydonworks.com/practical_aria_examples/) for components such as tab groups, tooltips, and alert dialogs.
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Wayfinding
@@ -46,12 +64,6 @@
 ### Image Alternative Text
 
   - Use alternative text for any image used as content. Alternative text should provide a description of the image. If the image is presentational or decorative use an empty `alt=""` attribute instead of `role="presentation"`.
-
-**[⬆ back to top](#table-of-contents)**
-
-## ARIA
-
-  - Use ARIA Landmark roles to help assistive technologies navigate a website
 
 **[⬆ back to top](#table-of-contents)**
 
