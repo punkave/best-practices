@@ -44,7 +44,7 @@ Semantic HTML5 elements provide additional meaning to an HTML document for other
 
 ## ARIA
 
-  - In most cases, using semantic HTML elements makes explicit designation of landmark roles unnecessary (e.g., using `role="complementary"` on an `aside` element). The exceptions would be when they are serving slightly atypical roles. An example of the latter would be setting []`role="search"`](https://w3c.github.io/aria/aria/aria.html#search) on an `aside` element when it houses a search field.
+  - In most cases, using semantic HTML elements makes explicit designation of landmark roles unnecessary (e.g., using `role="complementary"` on an `aside` element). The exceptions would be when they are serving slightly atypical roles. An example of the latter would be setting [`role="search"`](https://w3c.github.io/aria/aria/aria.html#search) on an `aside` element when it houses a search field.
   - For more complex interactive components, use ARIA attributes to help assistive technologies navigate website functionality. Accessibility advocate Heydon Pickering has gathered [useful examples of using ARIA roles](http://heydonworks.com/practical_aria_examples/) for components such as tab groups, tooltips, and alert dialogs.
 
 **[⬆ back to top](#table-of-contents)**
