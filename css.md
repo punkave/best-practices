@@ -26,6 +26,19 @@ ITCSS organizes CSS into eight "groups" that can even be used to organize your L
 
 It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using these group names so that it's easy to identify the role of a selector in markup.
 
+### BEM
+
+Use the [BEM methodology](http://getbem.com/introduction/) to name class selectors.
+
+```html
+<article class="c-card c-card--theme">
+  <div class="c-card__body">
+    <h3 class="c-card__title c-card__title--featured">Vulputate Bibendum</h3>
+    <p class="c-card__lede">Aenean lacinia bibendum nulla sed consectetur.</p>
+  <div>
+</article>
+```
+
 ### Location Dependency
 Only use location dependent styles rarely.
 
