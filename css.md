@@ -31,12 +31,12 @@ It's also a helpful pattern to prefix selectors (i.e. `.o-, .c-, .u-`) using the
 Use the [BEM methodology](http://getbem.com/introduction/) to name class selectors.
 
 ```html
-<div class="c-card c-card--theme">
+<article class="c-card c-card--theme">
   <div class="c-card__body">
-    <h3 class="c-card__title c-card__title--editorial">Vulputate Bibendum</h3>
+    <h3 class="c-card__title c-card__title--featured">Vulputate Bibendum</h3>
     <p class="c-card__lede">Aenean lacinia bibendum nulla sed consectetur.</p>
   <div>
-</div>
+</article>
 ```
 
 ### Location Dependency
