@@ -6,6 +6,8 @@
 
 ## Tables
 
+HTML tables should be exclusively used for tabular data, such as usage reports or structured information (see example). They should not be used for layout.
+
 Use the `scope` attribute to identify if a table header is a row or column header. Always use a descriptive `caption` and "visually hide" it if necessary for the design.
 
 ```html
