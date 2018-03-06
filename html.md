@@ -3,6 +3,7 @@
 ## Table of Contents
 
 1. [Tables](#tables)
+2. [Links](#links)
 
 ## Tables
 
@@ -32,3 +33,15 @@ Use the `scope` attribute to identify if a table header is a row or column heade
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+## Links
+
+### Use of `target="_blank"`
+
+#### Performance
+
+When your page links to another page using `target="_blank"`, the new page runs on the same process as your page. If the new page is executing expensive JavaScript, your page's performance may also suffer. See a more detailed explanation [here](https://jakearchibald.com/2016/performance-benefits-of-rel-noopener/).
+
+#### Security
+
+When you use `target="_blank"`, the new page has access to your window object via `window.opener`, and it can navigate your page to a different URL using `window.opener.location = newURL`. Using `rel=noopener` ensures `window.opener` is `null`. See [Demo](https://mathiasbynens.github.io/rel-noopener/).
