@@ -44,4 +44,6 @@ When your page links to another page using `target="_blank"`, the new page runs 
 
 #### Security
 
-When you use `target="_blank"`, the new page has access to your window object via `window.opener`, and it can navigate your page to a different URL using `window.opener.location = newURL`. Using `rel=noopener` ensures `window.opener` is `null`. See [Demo](https://mathiasbynens.github.io/rel-noopener/).
+When you use `target="_blank"`, the new page has access to your window object via `window.opener`, and it can navigate your page to a different URL using `window.opener.location = newURL`. Using `rel=noopener` ensures `window.opener` is `null`. See [demo](https://mathiasbynens.github.io/rel-noopener/).
+
+**[⬆ back to top](#table-of-contents)**
