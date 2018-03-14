@@ -7,3 +7,5 @@ A collection of vetted and useful third-party modules and libraries for common d
 
 ## Front End Components
 - Calendar components: http://kylestetz.github.io/CLNDR/
+
+##browser
