@@ -6,8 +6,11 @@ A collection of vetted and useful third-party modules and libraries for common d
 - Zip file generation/archiving: https://archiverjs.com/docs/
 - localtunnel - Share your localhost: https://www.npmjs.com/package/localtunnel
 
-## Front End Components
+## Front End Components/Libraries
 - Calendar components: http://kylestetz.github.io/CLNDR/
+- Carousels: https://github.com/nolimits4web/swiper
+- Smooth scroll: https://github.com/cferdinandi/smooth-scroll
+- Scroll reveal animation: https://github.com/jlmakes/scrollreveal
 
 ## Browser Extensions
 
