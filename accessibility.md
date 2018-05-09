@@ -10,7 +10,8 @@
   5. [Images](#images)
   6. [Links](#links)
   7. [JavaScript](#javascript)
-  8. [Testing](#testing)
+  8. [Email](#email)
+  9. [Testing](#testing)
 
 ## Language Attribute
 
@@ -102,6 +103,12 @@ Semantic HTML5 elements provide additional meaning to an HTML document for other
   - Provide keyboard alternative events
 
 **[⬆ back to top](#table-of-contents)**
+
+## Email
+
+### Section 508
+
+  - Satisfy each item of the HHS.gov [Email 508 Checklist](https://www.hhs.gov/web/section-508/making-files-accessible/checklist/email-508-checklist/index.html)
 
 ## Testing
 
