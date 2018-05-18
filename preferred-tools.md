@@ -22,4 +22,14 @@ https://chrome.google.com/webstore/detail/facebook-pixel-helper/fdgfkebogiimcoed
 - JSONView - Formatted and syntax highlighted view for JSON in your browser: https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc
 - WAVE Evaluation Tool - Evaluate web accessibility within the Chrome browser: https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US
 
+
+## Miscellaneous
+- MongoDB compass - Easy UI to view / manage Mongo databases: https://www.mongodb.com/products/compass
+
+- Postman - Test APIS: 
+https://www.getpostman.com/
+
+- 1password - Password manager:
+https://1password.com/
+
 NOTE: Any ad blocker extensions can cause issues like preventing Google Tags or Facebook Pixels to fire (and their respective browser extensions above to report false errors). We recommend removing ad blockers from your dev environment.
