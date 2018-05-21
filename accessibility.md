@@ -12,6 +12,7 @@
   7. [JavaScript](#javascript)
   8. [Email](#email)
   9. [Testing](#testing)
+  10. [Misc HTML markup notes](#misc-html-markup-notes)
 
 ## Language Attribute
 
