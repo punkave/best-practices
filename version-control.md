@@ -23,6 +23,6 @@ If you need to make a bug fix to a production application make a `hotfix` branch
 **[⬆ back to top](#table-of-contents)**
 
 ## Merging
-Merging a branch into `master` requires approvals from at least 2 reviewers. Even though only 2 approvals are required for merging, all relevant parties must be added as reviewers (the entire team if the PR is on a public module/repo) and the changes must be announced to those parties. The #development channel in Slack is usually the most appropriate place to do this. The person that opens the PR is responsible for merging (when approval requirements are met and tests are all passing). Optionally, the person that opens the PR may add an `assignee`, who will then be responsible for merging.
+Merging a branch into `master` on all repos for internal tools, boilerplates, npm modules, etc. requires approvals from at least 2 reviewers. Even though only 2 approvals are required for merging, all relevant parties must be added as reviewers (the entire team might be appropriate if the PR is on a public module/repo) and the changes must be announced to those parties. The #development channel in Slack is usually the most appropriate place to do this. The person that opens the PR is responsible for merging (when approval requirements are met and tests are all passing). Optionally, the person that opens the PR may add an `assignee`, who will then be responsible for merging.
 
 **[⬆ back to top](#table-of-contents)**
