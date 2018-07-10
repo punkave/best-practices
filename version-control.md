@@ -4,6 +4,7 @@ We use Git for version control and GitHub for hosting repositories.
 
 ## Table of Contents
 1. [Workflow](#workflow)
+2. [Merging](#merging)
 
 ## Workflow
 
@@ -18,5 +19,10 @@ When working off of the `develop` branch use `feature` branches descriptively na
 When ready to make a release to production you should use a `release` branch off of `develop`, prefixed by "release". For example, `release/1.0.0`. Your release branch should be named using [semantic versioning](http://semver.org/) and this version should be the same as your version number in `package.json`. A pull request should be made to merge your release into `master`.
 
 If you need to make a bug fix to a production application make a `hotfix` branch off of `master`. A pull request should be made directly into `master` and `master` should then me merged back into `develop` to stay up to date. The developer should follow this branching model when the project is in "post-launch support". If a significant feature is being addressed use `feature` branches off of develop; if bug fixes are being addressed use `hotfix` branches and merge directly into `master`.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Merging
+Merging a branch into `master` on all repos for internal tools, boilerplates, npm modules, etc. requires approvals from at least 2 reviewers. Even though only 2 approvals are required for merging, all relevant parties must be added as reviewers (the entire team might be appropriate if the PR is on a public module/repo) and the changes must be announced to those parties. The #development channel in Slack is usually the most appropriate place to do this. The person that opens the PR is responsible for merging (when approval requirements are met and tests are all passing). Optionally, the person that opens the PR may add an `assignee`, who will then be responsible for merging.
 
 **[⬆ back to top](#table-of-contents)**
