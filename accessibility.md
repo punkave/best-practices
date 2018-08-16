@@ -12,6 +12,7 @@
   7. [JavaScript](#javascript)
   8. [Email](#email)
   9. [Testing](#testing)
+  10. [Misc HTML markup notes](#misc-html-markup-notes)
 
 ## Language Attribute
 
@@ -115,3 +116,12 @@ Semantic HTML5 elements provide additional meaning to an HTML document for other
   - Sites should be tested during development to ensure basic accessibility standards are being met (WCAG 2.0 AA or higher if required by the project). One simple way to do this is to install the [WAVE Toolbar browser extension](http://wave.webaim.org/extension/).
 
 **[⬆ back to top](#table-of-contents)**
+
+## Misc HTML markup notes
+
+### iframes
+
+You should always give iframes a `title` attribute with basic description of their contents. For example, if you're embedding a map of office locations: `title="Office locations map"`. [REF](https://webaim.org/techniques/frames/)
+
+**[⬆ back to top](#table-of-contents)**
+
