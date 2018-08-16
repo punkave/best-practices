@@ -121,7 +121,7 @@ Semantic HTML5 elements provide additional meaning to an HTML document for other
 
 ### iframes
 
-You should always give iframes a `title` attribute with basic description of their contents. For example, if you're embedding a map of office locations: `title="Office locations map"`. Simple enough. [REF](https://webaim.org/techniques/frames/)
+You should always give iframes a `title` attribute with basic description of their contents. For example, if you're embedding a map of office locations: `title="Office locations map"`. [REF](https://webaim.org/techniques/frames/)
 
 **[⬆ back to top](#table-of-contents)**
 
