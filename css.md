@@ -120,7 +120,21 @@ Set a root `font-size` of `62.5%` on the `html` selector, which is roughly equiv
 ## Stacking Order
 
 ### Z-index
-Use variables or maps to manage z-index values. Variables or keys should be named semantically, such as "z-index-modal". Values should ideally be set `1, 2, 3, 4` etc. and shouldn't be set arbitrarily. Declarations like `z-index: 9999;` should never be used and always avoid `!important`. Store all variables or maps in a partial or single place.
+Use variables or maps to manage z-index values. Variables or keys should be named semantically, such as "z-index-modal". Values should ideally be set `1, 2, 3, 4` etc. and shouldn't be set arbitrarily. Store all variables or maps in a partial or single place.
+
+These z-index variables should be used as semantically named. For example, `.c-search__filters` should not be using the `nav` z-index variable. Better to have multiple z-index variables with the same value than mix up their usage (causing the kind of confusion the vars were meant to prevent). For example:
+
+```css
+$z-index: (
+  float: 1,
+  ui: 2,
+  nav: 2,
+  indexFilters: 2,
+  modal: 3
+);
+```
+
+Declarations like `z-index: 9999;` should never be used and always avoid `!important`.
 
 **[⬆  back to top](#table-of-contents)**
 
