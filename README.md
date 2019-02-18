@@ -4,7 +4,7 @@
 * If discussed during the meeting, someone on the team should capture notes in a GitHub issue discussion and supply a few code examples for further "offline" discussion
 * The developer responsible for the topic creates a pull request to this repo with changes or additions reflecting the consensus of the group
 
-## Guiding Principals
+## Guiding Principles
 
 We use these as a lens with which to examine potential best practices:
 
