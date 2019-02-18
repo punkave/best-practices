@@ -6,7 +6,7 @@
 
 ## <a name="production">Production overview and tools used</a>
 
-**The support team is normally responsible for the initial launch of websites,** including provisioning of production servers. We always offer managed hosting services to the client.
+**The support team is normally responsible for the initial launch of websites,** including provisioning of production servers. We almost always offer managed hosting services to the client (occasionally the tech stack or client bureaucracy makes it not appropriate).
 
 We use [mechanic](https://npmjs.org/package/mechanic) and [Stagecoach](https://github.com/punkave/stagecoach).
 
