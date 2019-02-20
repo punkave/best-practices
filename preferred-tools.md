@@ -33,3 +33,6 @@ https://www.getpostman.com/
 https://1password.com/
 
 NOTE: Any ad blocker extensions can cause issues like preventing Google Tags or Facebook Pixels to fire (and their respective browser extensions above to report false errors). We recommend removing ad blockers from your dev environment.
+
+## Interesting libraries/modules to validate
+- Fuse.js - Lightweight fuzzy-search library. Zero dependencies. https://fusejs.io/
