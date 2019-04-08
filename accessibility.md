@@ -116,6 +116,6 @@ Semantic HTML5 elements provide additional meaning to an HTML document for other
 
   - Sites should be tested during development to ensure basic accessibility standards are being met (WCAG 2.0 AA or higher if required by the project). One simple way to do this is to install the [WAVE Toolbar browser extension](http://wave.webaim.org/extension/).
 
-  - We currently use [pA11y](https://github.com/pa11y/pa11y-ci) for command line and CI testing of projects before merges/deployments using [apostrophe-site-map](https://github.com/apostrophecms/apostrophe-site-map).
+  - We currently use [pA11y](https://github.com/pa11y/pa11y-ci) for command line and CI testing of projects before merges/deployments using [apostrophe-site-map](https://github.com/apostrophecms/apostrophe-site-map) to generate a list of URLs for pA11y to crawl.
 
 **[⬆ back to top](#table-of-contents)**
