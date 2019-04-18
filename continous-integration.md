@@ -2,7 +2,7 @@
 
 ## Table of Contents
 1. [Setup](#setup)
-2. [Adding a status badge](#badge)
+2. [Adding a status badge](#adding-a-status-badge)
 
 
 ## Setup
