@@ -12,6 +12,7 @@ A collection of vetted and useful third-party modules and libraries for common d
 - Smooth scroll: https://github.com/cferdinandi/smooth-scroll
 - Scrolla (jQuery plugin for reveal animations when scrolling): https://maximzhurkin.github.io/jquery-scrolla/
 - Animate On Scroll (AOS) - https://github.com/michalsnik/aos
+- Video wrapper: https://plyr.io/ https://github.com/sampotts/plyr
 
 ## Browser Extensions
 
