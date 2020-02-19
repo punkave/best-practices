@@ -5,6 +5,7 @@ A collection of vetted and useful third-party modules and libraries for common d
 ## Utilities
 - Zip file generation/archiving: https://archiverjs.com/docs/
 - localtunnel - Share your localhost: https://www.npmjs.com/package/localtunnel
+- svgo - SVG Optimizer: https://jakearchibald.github.io/svgomg/
 
 ## Front End Components/Libraries
 - Calendar components: http://kylestetz.github.io/CLNDR/
