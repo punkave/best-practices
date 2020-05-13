@@ -30,4 +30,4 @@ To remedy this, you have to clear the npm cache. There are two ways to do this:
 1. Update something in package json
 2. Better option: update env variable in circle
 
-See `client-boilerplate` for [circle related config](https://github.com/punkave/client-boilerplate/blob/master/.circleci/config.yml).
+See `client-boilerplate` for [circle related config](https://github.com/punkave/client-boilerplate/blob/master/.circleci/config.yml). In order to use a cache version number (`CACHE_VERSION`), that variable must be set in the CircleCI UI project level.
