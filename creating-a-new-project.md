@@ -1,8 +1,9 @@
 # Creating a New Project
 
-* [Choosing the shortname (and everything-name) of your project](#gshortname)
-* [Creating the project from our client-boilerplate](#client-boilerplate)
-* [Forking a project to start a "2.0 version" while 1.0 or the "one-pager" lives on](#g2)
+1. [Choosing the shortname (and everything-name) of your project](#gshortname)
+2. [Creating the project from our client-boilerplate](#client-boilerplate)
+3. [Setting up continuous integration and branch protection rules](#rules)
+4. [Forking a project to start a "2.0 version" while 1.0 or the "one-pager" lives on](#g2)
 
 ## <a name="gshortname">Choosing the shortname (and everything-name) of your project</a>
 
@@ -18,6 +19,12 @@ We have a `client-boilerplate` project which is designed to be used with the Apo
 to create a project that is set up for our best internal practices.
 
 Do not use the default `apostrophe-boilerplate`. Instead, follow the instructions in the readme of [Client Boilerplate](https://github.com/punkave/client-boilerplate)
+
+## <a name="rules">Setting up continuous integration and branch protection rules</a>
+
+All new projects should be set up with CircleCI for continuous integration (see [CI Readme](https://github.com/punkave/best-practices/blob/main/continous-integration.md)). This provides automated linting and testing to help maintain code quality.
+
+In the settings tab for new projects, you must set up branch protection rules for `main` and `develop` (under the branches option on the repo settings page). Rules should include a pull request review requirement (see our [version control readme](https://github.com/punkave/best-practices/blob/main/version-control.md#merging) for details) and status checks for the branch being up to date and CircleCI build passing (CircleCI should be set up before creating these rules).
 
 ## <a name="g2">Forking a project to start a "2.0 version" while "1.0" lives on</a>
 
