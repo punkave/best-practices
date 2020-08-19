@@ -17,15 +17,7 @@ The shortname should be short, but consistency is even more important than brevi
 We have a `client-boilerplate` project which is designed to be used with the Apostrophe CLI
 to create a project that is set up for our best internal practices.
 
-Do not use the default `apostrophe-boilerplate`. Instead, type:
-
-```
-# If you didn't already, install the CLI
-npm install -g apostrophe-cli
-
-# Now make your project
-apostrophe create-project YOUR-SHORTNAME-HERE --boilerplate=https://github.com/punkave/client-boilerplate
-```
+Do not use the default `apostrophe-boilerplate`. Instead, follow the instructions in the readme of [Client Boilerplate](https://github.com/punkave/client-boilerplate)
 
 ## <a name="g2">Forking a project to start a "2.0 version" while "1.0" lives on</a>
 
