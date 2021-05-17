@@ -1,4 +1,6 @@
-# MONGO SHORTCUTS
+# Terminal Aliases 
+
+## MONGO SHORTCUTS
 alias mongostart='mongod --dbpath ~/data/db --storageEngine wiredTiger';
 alias mongorepair='mongod --dbpath ~/data/db --repair';
 alias mongostop='mongod --shutdown';
@@ -8,13 +10,13 @@ alias mongo_legacy='~/scripts/run-mongo-2-6';
 alias mongo_latest='~/scripts/run-mongo';
 alias run_mongo='function() { ~/scripts/run-mongo "$@"; }'
 
-# P'UNK DEV ENV SHORTCUTS
+## P'UNK DEV ENV SHORTCUTS
 alias go='npm start';
 alias godev='npm run dev';
 alias monitor='npm run monitor';
 alias npm-refresh="rm -rf node_modules && npm install"
 
-# GIT SHORTCUTS
+## GIT SHORTCUTS
 alias gs="git status"
 alias co="git checkout"
 alias ga="git add -A"
@@ -28,7 +30,7 @@ alias gwcdelete='f() { git branch | grep $1 | xargs git branch -D };f'
 alias gpsuo='git push --set-upstream origin';
 alias clonepunk='f() { cd ~/Documents/Sites && git clone git@github.com:punkave/$1.git && cd $1};f'
 
-# GENERAL SHORTCUTS
+## GENERAL SHORTCUTS
 alias sites="cd [PATH TO P'UNK SITES];"
 alias goharp='harp server . --port 3000'
 alias comp='harp compile src'
@@ -50,6 +52,6 @@ alias cdatom='f() { cd ~/Documents/Sites/$1 && atom .};f'
 alias nonet="networksetup -setairportpower en0 off"
 alias gonet="networksetup -setairportpower en0 on"
 
-# M1 CHIP SHORTCUTS
+## M1 CHIP SHORTCUTS
 alias c="code-insiders"
 alias rosetta="arch -x86_64 zsh"

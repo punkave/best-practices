@@ -1,0 +1,22 @@
+{
+  "Console Log": {
+    "prefix": ["console log"],
+    "body": ["<script>console.log({{${1:jawn} | json}})</script>"],
+    "description": "console.log some apos jawn in a script tag"
+  },
+  "Image Template Helper": {
+    "prefix": ["apos.images.first"],
+    "body": ["apos.images.first(${1:imageObj})"],
+    "description": "Apostrophe Image template helper"
+  },
+  "Attachment Template Helper": {
+    "prefix": ["apos.attachments"],
+    "body": ["apos.attachments.url(${1:attachmentObj})"],
+    "description": "Apostrophe Attachment URL template helper"
+  },
+  "Link Widgets Template Helper": {
+    "prefix": ["apos.links"],
+    "body": ["apos.links.linkPath(${1:linkObj})"],
+    "description": "Link Widgets template helper"
+  }
+}
