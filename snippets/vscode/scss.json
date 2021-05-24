@@ -1,7 +1,7 @@
 {
   "Breakpoint": {
     "prefix": ["breakpoint"],
-    "body": ["@include media-breakpoint-up(${1:breakpoint}) {${2:styles}}"],
+    "body": ["@include media-breakpoint-up(${1:medium}) {${2:styles}}"],
     "description": "Define a breakpoint"
   }
 }
